@@ -1,10 +1,11 @@
-
+//import './BasicInfo';
 import './App.css';
+import BasicInfo from './components/BasicInfo';
 
 function App() {
   return (
-    <div className="App">
-      <h1>hai amul</h1>
+    <div className="BasicInfo">
+     <BasicInfo/>
     
     </div>
   );
