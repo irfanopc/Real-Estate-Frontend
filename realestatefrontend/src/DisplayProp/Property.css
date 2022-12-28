@@ -1,0 +1,15 @@
+.display-property {
+    background-color: #ffffff;
+    padding: 30px;
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
