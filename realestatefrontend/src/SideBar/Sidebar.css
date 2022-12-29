@@ -1,0 +1,35 @@
+.sidebar{
+    background-color: #e1f9f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo h1 {
+    color: #1A1B1C;
+}
+
+.list section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list section h4 {
+    position: relative;
+    color: #aaaaaa;
+    left: 5px;
+    font-weight: lighter;
+}
+
+.special img {
+    position: relative;
+    right: 6px;
+}
+.special h4 {
+   margin-left: -9px;
+}
