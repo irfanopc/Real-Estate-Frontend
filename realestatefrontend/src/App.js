@@ -10,8 +10,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Signin />} />
         <Route path="/Signup" element={<Signup/>} />
+        <Route path="/home" element={"welcome to home page"} />
       </Routes>
     </BrowserRouter>
+
     
     </div>
   );
