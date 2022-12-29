@@ -1,15 +1,20 @@
 
-import {BrowserRouter, Routes, Route} from "react-router-dom"
 import './App.css';
-import Home from "./DisplayProp/Home";
-import Sidebar from "./SideBar/Sidebar";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Signup from "./signUp/Signup";
+import Signin from './signUp/Signin';
 function App() {
   return (
-    <BrowserRouter className="App">
-    {/* <Sidebar/> */}
-    <Home/>
+    <div className="App">
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Signin />} />
+        <Route path="/Signup" element={<Signup/>} />
+      </Routes>
     </BrowserRouter>
-  )
+    
+    </div>
+  );
 }
+
 export default App;
