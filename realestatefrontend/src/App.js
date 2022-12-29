@@ -1,3 +1,4 @@
+
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import './App.css';
 import Home from "./DisplayProp/Home";
@@ -9,8 +10,6 @@ function App() {
     {/* <Sidebar/> */}
     <Home/>
     </BrowserRouter>
-  );
+  )
 }
-
 export default App;
-
