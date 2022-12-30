@@ -21,8 +21,11 @@ fetch("http://localhost:5000/api/v1/signin",{
         email:signinData.email,
         password:signinData.password
     })
-}).then(res=>res.json())
-.then(data=>{console.log(data);
+}).then((res)=>{
+    res.json()
+    console.log(res)
+    })
+.then(data=>{
     if(data.message){
         return alert(data.message)
     }

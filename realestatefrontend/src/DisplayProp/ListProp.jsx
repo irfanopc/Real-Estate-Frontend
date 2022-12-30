@@ -14,7 +14,6 @@ const ListProp = () => {
     axios
       .get("/userdetails")
       .then( (response) =>{
-        console.log(response.data);
       })
       .catch( (error) =>{
         console.log(error);
