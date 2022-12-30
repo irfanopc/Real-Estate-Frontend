@@ -15,7 +15,7 @@ const Property = () => {
             <div className="select">
               <select defaultValue={'Username'}>
                 <option value="Username">
-                  User Nam
+                  User Name
                 </option>
                 <option value="Sign-Out">Sign Out</option>
               </select>

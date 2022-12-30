@@ -8,6 +8,7 @@ import Signup from "./signUp/Signup";
 import Signin from './signUp/Signin';
 import Home from './DisplayProp/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import BasicInfo from './components/BasicInfo';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Signup" element={<Signup/>} />
         <Route path="/Signup" element={<Signup/>} />
         <Route path="/home" element={<Home/>} />
+        <Route path="/BasicInfo" element={<BasicInfo/>} />
       </Routes>
     </BrowserRouter>
      
