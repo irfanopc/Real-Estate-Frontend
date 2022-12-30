@@ -1,14 +1,22 @@
 import React from "react";
+
+//import Display from "./Display";
+import "./BasicInfo.css";
+
 import AddNewProperty from "./AddProperty";
 import Sidebar from "../SideBar/Sidebar";
 import "./BasicInfo.css";
 
 import Property from "../DisplayProp/Property";
 
+
 //import Dropdown from 'react-bootstrap/Dropdown';
 
 const BasicInfo = () => {   
 return (
+
+      <div className="basicInfo">
+
   <>
   <div className="home">
   <div className="one"><Sidebar/></div>
@@ -16,11 +24,16 @@ return (
     <Property/>
     <AddNewProperty/>
   <div className="basicInfo">
+
         
        
         <span>
             <div className="leftSide">
+
+              <label id="propertyType">
+
               <label className="propertyType">
+
               Property Type
               <select id="selectBox"> 
               <option>Select Property Type</option>  
@@ -32,12 +45,19 @@ return (
             </div>
 
         <div className="leftSide">
+          Price
+
         <label className="propertyType">Price</label>
+
           <input id="selectBox" placeholder="Example:1000"/>
         </div>
 
         <div className="leftSide">
+
+          <label>
+
           <label className="propertyType">
+
           Property Age 
           
         <select id="selectBox"> 
@@ -49,7 +69,11 @@ return (
         </div>
 
         <div className="leftSide">
+
+          Property Description
+
         <label className="propertyType">Property Description</label> 
+
           <input  id="selectBox" placeholder=""/>
         </div>
 
@@ -61,7 +85,11 @@ return (
 
         <span>
             <div className="rightSide">
+
+              <label>
+
               <label className="propertyType">
+
               Negotiable 
               
               <select id="selectBox"> 
@@ -87,7 +115,11 @@ return (
         </div>
 
         <div className="rightSide">
+
+          <label>
+
           <label className="propertyType">
+
             Property Approved
           <select id="selectBox">  
           <option value="disabled select">Select Property Type</option>
@@ -119,6 +151,9 @@ return (
         
         </span>
         </div>
+
+     
+
        
   </div>
   </div>
@@ -128,6 +163,7 @@ return (
   
   </>
       
+
     );
   };
   
