@@ -12,10 +12,10 @@ const Property = () => {
             <div>
               <img src={Uslogo} alt={"User"} />
             </div>
-            <div>
-              <select>
-                <option value="Username" selected>
-                  Username
+            <div className="select">
+              <select defaultValue={'Username'}>
+                <option value="Username">
+                  User Nam
                 </option>
                 <option value="Sign-Out">Sign Out</option>
               </select>
