@@ -1,14 +1,20 @@
 import React from "react";
 import AddNewProperty from "./AddProperty";
-//import Display from "./Display";
+import Sidebar from "../SideBar/Sidebar";
 import "./BasicInfo.css";
+
+import Property from "../DisplayProp/Property";
 
 //import Dropdown from 'react-bootstrap/Dropdown';
 
 const BasicInfo = () => {   
 return (
   <>
-  <AddNewProperty/>
+  <div className="home">
+  <div className="one"><Sidebar/></div>
+  <div className="two">
+    <Property/>
+    <AddNewProperty/>
   <div className="basicInfo">
         
        
@@ -113,6 +119,13 @@ return (
         
         </span>
         </div>
+       
+  </div>
+  </div>
+  
+  
+  
+  
   </>
       
     );
