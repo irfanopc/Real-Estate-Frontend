@@ -1,43 +1,40 @@
 import React from "react";
+import AddNewProperty from "./AddProperty";
 //import Display from "./Display";
-//import "./BasicInfo.css";
+import "./BasicInfo.css";
 
 //import Dropdown from 'react-bootstrap/Dropdown';
 
 const BasicInfo = () => {   
 return (
-      <div className="BasicInfo">
-        <div><h1>ADD NEW PROPERTY</h1></div>
-        <div>
-            <span>Basic Info</span>
-            <span>Property Detail</span>
-            <span>General Info</span>
-            <span>Location Info</span>
-        </div>
-        <div>
+  <>
+  <AddNewProperty/>
+  <div className="basicInfo">
+        
+       
         <span>
-            <div>
-              <label>
+            <div className="leftSide">
+              <label className="propertyType">
               Property Type
-              <select> 
+              <select id="selectBox"> 
               <option>Select Property Type</option>  
               <option>Flat</option>
-          <option>Plot</option>
-          <option>House</option>
+              <option>Plot</option>
+              <option>House</option>
               </select>
               </label>
+            </div>
+
+        <div className="leftSide">
+        <label className="propertyType">Price</label>
+          <input id="selectBox" placeholder="Example:1000"/>
         </div>
 
-        <div>
-          price
-          <input placeholder="Example:1000"/>
-        </div>
-
-        <div>
-          <label>
+        <div className="leftSide">
+          <label className="propertyType">
           Property Age 
           
-        <select> 
+        <select id="selectBox"> 
           <option>3</option>
           <option>7</option>
           <option>10</option>
@@ -45,18 +42,23 @@ return (
               </label>
         </div>
 
-        <div>
-          Property Description
-          <input placeholder=""/>
+        <div className="leftSide">
+        <label className="propertyType">Property Description</label> 
+          <input  id="selectBox" placeholder=""/>
         </div>
+
+        <div className="cancel">
+             <button>Cancel</button>
+          </div>
+
         </span>
 
         <span>
-            <div>
-              <label>
+            <div className="rightSide">
+              <label className="propertyType">
               Negotiable 
               
-              <select> 
+              <select id="selectBox"> 
           <option>Yes</option>
           <option>No</option>
           
@@ -64,11 +66,11 @@ return (
               </label>
         </div>
 
-        <div>
+        <div className="rightSide">
 
-          <label>
+          <label className="propertyType">
           Ownership  
-        <select>
+        <select id="selectBox">
         <option>Select Ownership</option>
         <option>Given</option>
           <option>Not given</option>
@@ -78,10 +80,10 @@ return (
         
         </div>
 
-        <div>
-          <label>
+        <div className="rightSide">
+          <label className="propertyType">
             Property Approved
-          <select>  
+          <select id="selectBox">  
           <option value="disabled select">Select Property Type</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
@@ -92,24 +94,27 @@ return (
         
         </div>
 
-        <div>
+        <div className="rightSide">
 
-          <label>
+          <label className="propertyType">
           Bank Loan
           
-          <select> 
+          <select id="selectBox"> 
           <option>Approved</option>
           <option>Not Approved</option>
           
               </select>
               </label>
         </div>
+
+        <div className="saveContinue">
+             <button>Save & Continue</button>
+          </div>
         
         </span>
-
-
         </div>
-      </div>
+  </>
+      
     );
   };
   
