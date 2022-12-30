@@ -11,7 +11,7 @@ const Home = () => {
       <section className='one'>
        <Sidebar/>
       </section>
-      
+      <h1>irfan</h1>
       <section className='two'>
       <Property/>
       <SearchAdd/>
