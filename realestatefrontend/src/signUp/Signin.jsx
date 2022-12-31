@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import "./Signup.css"
 import { useNavigate } from 'react-router-dom'
+import Home from '../DisplayProp/Home';
 
 function Signin() {
     const [passwordShown, setPasswordShown] = useState(false);
+   
 
     const togglePasswordVisiblity = () => {
         setPasswordShown(passwordShown ? false : true);
@@ -12,6 +14,7 @@ function Signin() {
     const[signinData, setSigninData] = useState({email:"",password:""});
     const onSignin=(e)=>{
         e.preventDefault()
+
 fetch("http://localhost:5000/api/v1/signin",{
     method:"post",
     headers:{
@@ -22,12 +25,16 @@ fetch("http://localhost:5000/api/v1/signin",{
         password:signinData.password
     })
 }).then(res=>res.json())
-.then(data=>{console.log(data);
+.then((data)=>{;
+    console.log(data.user.email);
+    
     if(data.message){
         return alert(data.message)
     }
     alert(`user signin successfully`)
+
     navigator("/home");
+   
 })
 
     }
@@ -55,6 +62,10 @@ fetch("http://localhost:5000/api/v1/signin",{
                 <div>
   
         </div>
+            </div>
+            <div>
+              
+      
             </div>
         </>
     )
