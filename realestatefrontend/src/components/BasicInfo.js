@@ -15,8 +15,8 @@ import Property from "../DisplayProp/Property";
 const BasicInfo = () => {   
 return (
 
-      <div className="basicInfo">
-
+  
+  
   <>
   <div className="home">
   <div className="one"><Sidebar/></div>
@@ -30,7 +30,7 @@ return (
         <span>
             <div className="leftSide">
 
-              <label id="propertyType">
+        
 
               <label className="propertyType">
 
@@ -54,7 +54,7 @@ return (
 
         <div className="leftSide">
 
-          <label>
+          {/* <label> */}
 
           <label className="propertyType">
 
@@ -86,7 +86,7 @@ return (
         <span>
             <div className="rightSide">
 
-              <label>
+              {/* <label> */}
 
               <label className="propertyType">
 
@@ -116,7 +116,7 @@ return (
 
         <div className="rightSide">
 
-          <label>
+          {/* <label> */}
 
           <label className="propertyType">
 

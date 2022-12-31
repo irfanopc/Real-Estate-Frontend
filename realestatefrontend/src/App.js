@@ -28,14 +28,8 @@ function App() {
         <Route path="/GeneralInfo" element={<GeneralInfo/>} />
 
         <Route path="/LocationInfo" element={<LocationInfo/>} />
+        <Route path="/BasicInfo" element={<LocationInfo/>} />
       </Routes>  
-
-     
-
-        <Route path="/Signup" element={<Signup/>} />
-        <Route path="/home" element={<Home/>} />
-        <Route path="/BasicInfo" element={<BasicInfo/>} />
-      </Routes>
 
     </BrowserRouter>
      
