@@ -1,14 +1,14 @@
 .basicInfo {
     width: 1088px;
     height: 585px;
-    /* border: 20px solid black; */
+    
     top: 30%;
     left: 45%;
     border-radius: 5px;
-    /* background: #F5F5F5; */
+    margin-top: 2vmax;
     display: grid;
     grid-template-columns: auto auto auto;
-    margin-left: 17vmax;
+    margin-left: 10vmax;
 }
 
 
@@ -25,7 +25,8 @@ font-style: normal;
 font-weight: 400;
 font-size: 18px;
 line-height: 23px;
-/* identical to box height */
+background-color: white;
+box-shadow: 2px 3px #f5e2e2;
 
 
 color: #7D7D7D
@@ -37,12 +38,12 @@ color: #7D7D7D
     display: flex;
     flex-wrap: wrap;
     padding: 20px 10px 20px 10px ;
+    
 }
 
 .rightSide{
     float: right;
     display: flex;
-   
     padding: 20px 10px 20px 10px ;
 }
 
