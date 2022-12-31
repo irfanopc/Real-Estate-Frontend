@@ -6,6 +6,7 @@ import SearchAdd from './Search&Add/SearchAdd'
 import './Home.css'
 
 const Home = () => {
+
   
   return (
     <div className='home'>

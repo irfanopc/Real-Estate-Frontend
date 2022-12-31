@@ -8,35 +8,36 @@ import { useEffect } from "react";
 import axios from "axios";
 
 const ListProp = () => {
-  const [data, setData] = useState([]);
-
-  // useEffect(() => {
-  //   axios
-  //     .get("/userdetails")
-  //     .then( (response) =>{
-  //       console.log(response);
-  //     })
-  //     .catch( (error) =>{
-  //       console.log(error);
-  //     });
-
-  // }, []);
-
+  
+  
   const [posts, setPosts] = useState();
+  
   useEffect(() => {
+    const id = window.localStorage.getItem("id")
     
-    fetch("http://localhost:5000/userdetails/63adb6d33704aa9d7dcfb74c")
-      .then((res) => res.json())
-      .then((data) => {
-    let userDetails =  (data.userProperties);
-        setPosts(userDetails.map((data)=>{return (data)}));
-        // console.log(posts);
-      })
-      .catch((error) => {
-        if (error) console.log(error);
+    axios(`/userdetails/${id}`)
+    .then((data) => {
+         let user = (data.data.userProperties);
+        const property = user.map((obj) => {
+          return {
+            property: obj.properties.map(prop => prop)
+          }
+        })
+    
+        property.map((data)=> {
+          let user = data.property;
+              setPosts(user)
+          
+        })
+      
+      }).catch((error) => {
+      console.log(error);
       });
+
+
   }, [])
-  console.log(posts);
+
+  
 
   return (
     <div className="mainList">
@@ -51,13 +52,13 @@ const ListProp = () => {
         <div>Days Left</div>
         <div>Action</div>
       </div>
-
+<div>
      
         {posts &&
-          posts.map((data) => {
+          posts.map((data,i) => {
             return (
               <>
-               <div className="dislist"></div>
+               <div className="dislist" key={i}>
                 <div>{data.ppdId}</div>
                 <div>
                   <img src={Imglogo} alt={"img"} />
@@ -73,9 +74,11 @@ const ListProp = () => {
 
                   <img src={Editlogo} alt="Edit" />
                 </div>
+                </div>
               </>
             );
           })}
+          </div>
       </div>
    
   );

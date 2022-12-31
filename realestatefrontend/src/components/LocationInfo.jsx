@@ -1,4 +1,7 @@
 import React from "react";
+import Property from "../DisplayProp/Property";
+import Sidebar from "../SideBar/Sidebar";
+import AddNewProperty from "./AddProperty";
 //import Display from "./Display";
 
 import "./LocationInfo.css";
@@ -6,17 +9,25 @@ import "./LocationInfo.css";
 //import Dropdown from 'react-bootstrap/Dropdown';
 
 const LocationInfo = () => {
-    return (
+  return (
+    <>
+
+    <div className="home">
+    <div className="one">
+      <Sidebar/>
+    </div>
+    <div className="two">
+      <Property/>
+      <AddNewProperty/>
 
 
-<>
-<div className="maincontainer">
-      <div className="row">
+      <div className="maincontainer">
+        <div className="row">
           <div>
             <span>Email</span>
 
             <div className="selectBox">
-                     <input className="selectBox" placeholder="Email" />
+              <input className="selectBox" placeholder="Email" />
             </div>
           </div>
 
@@ -66,7 +77,7 @@ const LocationInfo = () => {
             <span>Address</span>
 
             <div className="selectBox">
-    
+
               <input className="selectBox" placeholder="Address" />
             </div>
           </div>
@@ -74,7 +85,7 @@ const LocationInfo = () => {
           <div>
             <span>Landmark</span>
             <div className="selectBox">
-             
+
               <input className="selectBox" placeholder="Landmark" />
             </div>
           </div>
@@ -87,44 +98,40 @@ const LocationInfo = () => {
             <span>Latitude</span>
 
             <div className="selectBox">
-             
 
-<input className="selectBox" placeholder="Latitude" />
+
+              <input className="selectBox" placeholder="Latitude" />
             </div>
           </div>
 
           <div>
             <span>Longitude</span>
             <div className="selectBox">
-             
-
-<input className="selectBox" placeholder="Latitude" />
+              <input className="selectBox" placeholder="Latitude" />
             </div>
           </div>
         </div>
-
-        
-
-
-        
-
-       
       </div>
 
       <div className="newbuttoncontainer">
-      <div className="newbutton">
-            <button>Previous</button>
-      </div>
-
-      <div className="newbutton">
-            <button>Save & Continue</button>
+        <div className="newbutton">
+          <button>Previous</button>
         </div>
-  
-      
-      </div>
-</>
 
-    );
+        <div className="newbutton">
+          <button>Save & Continue</button>
+        </div>
+
+
+      </div>
+
+      
+    </div>
+    </div>
+      
+    </>
+
+  );
 };
 
 export default LocationInfo;
