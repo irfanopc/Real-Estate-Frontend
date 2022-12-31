@@ -6,38 +6,33 @@ import Editlogo from "./HomeLogo/editlogo.svg";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
-
-const ListProp = () => {
+const ListProp = ({user}) => {
   const [data, setData] = useState([]);
+  const [posts, setPosts] = useState([]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("/userdetails")
-  //     .then( (response) =>{
-  //       console.log(response);
-  //     })
-  //     .catch( (error) =>{
-  //       console.log(error);
-  //     });
 
-  // }, []);
-
-  const [posts, setPosts] = useState();
   useEffect(() => {
-    
-    fetch("http://localhost:5000/userdetails/63adb6d33704aa9d7dcfb74c")
+   
+    fetch(`http://localhost:5000/userdetails/63adb6d33704aa9d7dcfb74c`)
       .then((res) => res.json())
       .then((data) => {
-    let userDetails =  (data.userProperties);
-        setPosts(userDetails.map((data)=>{return (data)}));
-        // console.log(posts);
+        let userDetails = data.userProperties.map((obj)=>{
+          return {
+            email : obj.email,
+            properties : obj.properties.map(properyDetail=>properyDetail)
+          }
+        })
+      userDetails.map((data)=>{
+        let user = data.properties;
+        //console.log(user);
+        setPosts(user);
+      })
+        
       })
       .catch((error) => {
         if (error) console.log(error);
       });
   }, [])
-  console.log(posts);
-
   return (
     <div className="mainList">
       <div className="listprop">
@@ -57,7 +52,7 @@ const ListProp = () => {
           posts.map((data) => {
             return (
               <>
-               <div className="dislist"></div>
+               <div className="dislist">
                 <div>{data.ppdId}</div>
                 <div>
                   <img src={Imglogo} alt={"img"} />
@@ -70,8 +65,8 @@ const ListProp = () => {
                 <div>{data.daysLeft}</div>
                 <div className="action">
                   <img src={Eyelogo} alt="Eye" />
-
                   <img src={Editlogo} alt="Edit" />
+                </div>
                 </div>
               </>
             );

@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import "./Signup.css"
 import { useNavigate } from 'react-router-dom'
-import Home from '../DisplayProp/Home';
+import ListProp from '../DisplayProp/ListProp';
 
 function Signin() {
     const [passwordShown, setPasswordShown] = useState(false);
-   
+    const [user,setUser] = useState("");
 
     const togglePasswordVisiblity = () => {
         setPasswordShown(passwordShown ? false : true);
@@ -22,23 +22,23 @@ fetch("http://localhost:5000/api/v1/signin",{
     },
     body:JSON.stringify({
         email:signinData.email,
-        password:signinData.password
+        password:signinData.password,
     })
 }).then(res=>res.json())
 .then((data)=>{;
-    console.log(data.user.email);
-    
+   // setUser(data);
+//    setUser((data.user.email));
+   console.log(user);
     if(data.message){
         return alert(data.message)
     }
     alert(`user signin successfully`)
-
+  
     navigator("/home");
    
 })
 
     }
-
     return (
         <>
             <div className="login-main" >
@@ -64,9 +64,7 @@ fetch("http://localhost:5000/api/v1/signin",{
         </div>
             </div>
             <div>
-              
-      
-            </div>
+          </div>
         </>
     )
 }
