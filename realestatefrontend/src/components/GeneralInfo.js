@@ -7,111 +7,98 @@ import "./GeneralInfo.css";
 
 const GeneralInfo = () => {
     return (
-        <div className="GeneralInfo">
+       <>
+<div className="maincontainer">
+      <div className="row">
+          <div>
+            <span>Name</span>
 
+            <div className="selectBox">
+              <select defaultValue={"toilet"} className="selectBox">
+                <option value={"toilet"}>Owner</option>
+                <option>Yes</option>
+                <option>NO</option>
+              </select>
+            </div>
+          </div>
 
-            <span>
-
-                <div className="leftSide">
-                    <label>
-                        Name
-
-                        <select id="selectBox">
-                            <option>Owner</option>
-                            <option>Rental</option>
-
-                        </select>
-                    </label>
-                </div>
-
-                <div className="leftSide">
-                    <label>
-                        Posted by
-
-                        <select id="selectBox">
-                            <option>Builder</option>
-                            <option>Employee</option>
-                            <option>Anyone</option>
-                        </select>
-                    </label>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-                <div className="leftSide">
-                    <label>
-                        Featured Package
-
-                        <select id="selectBox">
-                            <option>Please Select</option>
-                            <option>Not Select</option>
-                            <option>None</option>
-
-                        </select>
-                    </label>
-                </div>
-
-                <div className="previous">
-                    <button>Previous</button>
-                </div>
-            </span>
-
-            {/* =======================Right Side Part ======================= */}
-            <span>
-            <div className="rightSide">
-                    Mobile
-
-                    <input id="selectBox" placeholder="Enter Mobile Number" />
-                </div>
-
-                <div className="rightSide">
-
-                    <label>
-                        Sale Type
-                        <select id="selectBox">
-                            <option>Property</option>
-                            <option>Flat</option>
-                            <option>Plot</option>
-
-                        </select>
-                    </label>
-
-                </div>
-
-
-                <div className="rightSide">
-
-                    <label>
-                        PPD Package
-                        <select id="selectBox">
-                            <option>First</option>
-                            <option>Second </option>
-                            <option></option>
-
-                        </select>
-                    </label>
-
-                </div>
-
-                <div className="saveContinue">
-                    <button>Save & Continue</button>
-                </div>
-            </span>
+          <div>
+            <span>Mobile</span>
+            <div className="selectBox">
+              
+              <input className="selectBox" placeholder="Enter Mobile Number" />
+            </div>
+          </div>
         </div>
 
 
 
-                
+
+        <div className="row">
+          <div>
+            <span>Posted by</span>
+
+            <div className="selectBox">
+              <select defaultValue={"toilet"} className="selectBox">
+                <option value={"toilet"}>Posted by</option>
+                <option>Yes</option>
+                <option>NO</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <span>Sale Type</span>
+            <div className="selectBox">
+              <select defaultValue={"toilet"} className="selectBox">
+                <option value={"toilet"}>Please Select</option>
+                <option>Yes</option>
+                <option>NO</option>
+              </select>
+            </div>
+          </div>
+        </div>
 
 
+        <div className="row">
+          <div>
+            <span>Featured Package</span>
+
+            <div className="selectBox">
+              <select defaultValue={"toilet"} className="selectBox">
+                <option value={"toilet"}>Please Select</option>
+                <option>Yes</option>
+                <option>NO</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <span>PPD Package</span>
+            <div className="selectBox">
+              <select defaultValue={"toilet"} className="selectBox">
+                <option value={"toilet"}>Please Select</option>
+                <option>Yes</option>
+                <option>NO</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+   </div>
+
+      <div className="newbuttoncontainer">
+      <div className="newbutton">
+            <button>Previous</button>
+      </div>
+
+      <div className="newbutton">
+            <button>Save & Continue</button>
+        </div>
+  
+      
+      </div>
+</>
 
 
 
