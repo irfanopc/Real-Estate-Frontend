@@ -8,19 +8,36 @@ import { useEffect } from "react";
 import axios from "axios";
 
 const ListProp = () => {
-  const [data, setData] = useState([]);
-
+  
+  
+  const [posts, setPosts] = useState();
+  
   useEffect(() => {
-    axios
-      .get("/userdetails")
-      .then( (response) =>{
-      })
-      .catch( (error) =>{
-        console.log(error);
+    const id = window.localStorage.getItem("id")
+    
+    axios(`/userdetails/${id}`)
+    .then((data) => {
+         let user = (data.data.userProperties);
+        const property = user.map((obj) => {
+          return {
+            property: obj.properties.map(prop => prop)
+          }
+        })
+    
+        property.map((data)=> {
+          let user = data.property;
+              setPosts(user)
+          
+        })
+      
+      }).catch((error) => {
+      console.log(error);
       });
 
-  }, []);
- 
+
+  }, [])
+
+  
 
   return (
     <div className="mainList">
@@ -35,43 +52,35 @@ const ListProp = () => {
         <div>Days Left</div>
         <div>Action</div>
       </div>
+<div>
+     
+        {posts &&
+          posts.map((data,i) => {
+            return (
+              <>
+               <div className="dislist" key={i}>
+                <div>{data.ppdId}</div>
+                <div>
+                  <img src={Imglogo} alt={"img"} />
+                </div>
+                <div>Plot</div>
+                <div>{data.mobile}</div>
+                <div>1200</div>
+                <div>{data.views}</div>
+                <div>{data.status}</div>
+                <div>{data.daysLeft}</div>
+                <div className="action">
+                  <img src={Eyelogo} alt="Eye" />
 
-      <div className="dislist">
-        <div>PPD125</div>
-        <div>
-          <img src={Imglogo} alt={"img"} />
-        </div>
-        <div>Plot</div>
-        <div>93701723482</div>
-        <div>1200</div>
-        <div>22</div>
-        <div>Sold</div>
-        <div>35</div>
-        <div className="action">
-          <img src={Eyelogo} alt="eye" />
-
-          <img src={Editlogo} alt="edit" />
-        </div>
+                  <img src={Editlogo} alt="Edit" />
+                </div>
+                </div>
+              </>
+            );
+          })}
+          </div>
       </div>
-
-      <div className="dislist">
-        <div>PPD125</div>
-        <div>
-          <img src={Imglogo} alt={"img"} />
-        </div>
-        <div>Plot</div>
-        <div>93701723482</div>
-        <div>1200</div>
-        <div>22</div>
-        <div>Sold</div>
-        <div>35</div>
-        <div className="action">
-          <img src={Eyelogo} alt="Eye" />
-
-          <img src={Editlogo} alt="Edit" />
-        </div>
-      </div>
-    </div>
+   
   );
 };
 
