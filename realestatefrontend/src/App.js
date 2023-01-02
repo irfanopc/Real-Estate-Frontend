@@ -9,6 +9,8 @@ import Signin from './signUp/Signin';
 import Home from './DisplayProp/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BasicInfo from './components/BasicInfo';
+import PropertyDetail from './components/PropertyDetail';
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path="/Signup" element={<Signup/>} />
         <Route path="/home" element={<Home/>} />
         <Route path="/BasicInfo" element={<BasicInfo/>} />
+        <Route path="/PropertyDetail" element={<PropertyDetail/>} />
       </Routes>
     </BrowserRouter>
      
