@@ -8,7 +8,11 @@ import LocationInfo from './components/LocationInfo';
 import Home from './DisplayProp/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BasicInfo from './components/BasicInfo';
+
+import PropertyDetail from './components/PropertyDetail';
+
 import { useState } from 'react';
+
 
 
 
@@ -27,11 +31,13 @@ function App() {
         <Route path="/" element={<Signin />} />
         <Route path="/Signup" element={<Signup/>}/>
         <Route path="/home" element={<Home/>} />
+
         <Route path="/BasicInfo" element={<BasicInfo/>} /> 
         <Route path="/PropertyDetail" element={<PropertyDetail/>} />
         <Route path="/GeneralInfo" element={<GeneralInfo/>} />
          <Route path="/LocationInfo" element={<LocationInfo/>} />
       </Routes>  
+
 
     </BrowserRouter>
      
