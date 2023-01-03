@@ -5,8 +5,8 @@ import Property from './Property'
 import SearchAdd from './Search&Add/SearchAdd'
 import './Home.css'
 
-const Home = () => {
-
+const Home = ({details}) => {
+console.log();
   
   return (
     <div className='home'>
@@ -21,7 +21,6 @@ const Home = () => {
       <ListProp/>
       </section>
 <div>
-{/* {posts && posts.map((post)=>{return console.log(post);})} */}
 </div>
     </div>
   )

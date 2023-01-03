@@ -10,6 +10,10 @@ import Sidebar from "../SideBar/Sidebar";
 import "./BasicInfo.css";
 
 import Property from "../DisplayProp/Property";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Home from "../DisplayProp/Home";
+
 
 
 //import Dropdown from 'react-bootstrap/Dropdown';
@@ -23,6 +27,12 @@ return (
 //import Dropdown from 'react-bootstrap/Dropdown';
 
 const BasicInfo = () => {
+  const [details, setDetails] = useState({Property_Type:"",Negotiable:"",Price:"",Ownership:"",Property_Age:"",Property_Approved:"",Property_Description:"",Bank_Loan:""})
+  const navigator = useNavigate();
+  const onContinue = () =>{
+
+     navigator("/PropertyDetail",{state:{details:details}});
+  }
   return (
 
     <>
@@ -31,8 +41,8 @@ const BasicInfo = () => {
 
   <div className="one"><Sidebar/></div>
   <div className="two">
-    <Property/>
-    <AddNewProperty/>
+    <Property  />
+    <AddNewProperty   />
     <div className="maincontainer">
       
           
@@ -41,8 +51,8 @@ const BasicInfo = () => {
             <span className="titles">Property Type</span>
 
             <div className="selectBox">
-              <select defaultValue={"toilet"} className="selectBox">
-                <option value={"toilet"}>Western Toilet</option>
+              <select defaultValue={"toilet"} className="selectBox" onChange={(e)=>{setDetails({...details,Property_Type:e.target.value})}} >
+                <option value={"toilet"}>Select propety Type</option>
                 <option>Flat</option>
                 <option>House</option>
                 <option>Plot</option>
@@ -52,8 +62,8 @@ const BasicInfo = () => {
             <div>
             <span className="titles">Negotiable</span>
             <div className="selectBox">
-              <select defaultValue={"toilet"} className="selectBox">
-                <option value={"toilet"}>Western Toilet</option>
+              <select defaultValue={"toilet"} className="selectBox" onChange={(e)=>{setDetails({...details,Negotiable:e.target.value})}} >
+                <option value={"toilet"}>Select Negotiable</option>
                 <option>Yes</option>
                 <option>NO</option>
               </select>
@@ -67,8 +77,8 @@ const BasicInfo = () => {
             <span className="titles">Price</span>
 
             <div className="selectBox">
-              <select defaultValue={"toilet"} className="selectBox">
-                <option value={"toilet"}>Western Toilet</option>
+              <select defaultValue={"toilet"} className="selectBox" onChange={(e)=>{setDetails({...details,Price:e.target.value})}} >
+                <option value={"toilet"}>Example price</option>
                 <option>Flat</option>
                 <option>House</option>
                 <option>Plot</option>
@@ -78,8 +88,8 @@ const BasicInfo = () => {
             <div>
             <span className="titles">Ownership</span>
             <div className="selectBox">
-              <select defaultValue={"toilet"} className="selectBox">
-                <option value={"toilet"}>Western Toilet</option>
+              <select defaultValue={"toilet"} className="selectBox" onChange={(e)=>{setDetails({...details,Ownership:e.target.value})}} >
+                <option value={"toilet"}>Select Ownership</option>
                 <option>Yes</option>
                 <option>NO</option>
               </select>
@@ -92,8 +102,8 @@ const BasicInfo = () => {
             <span className="titles">Property Age</span>
 
             <div className="selectBox">
-              <select defaultValue={"toilet"} className="selectBox">
-                <option value={"toilet"}>Western Toilet</option>
+              <select defaultValue={"toilet"} className="selectBox" onChange={(e)=>{setDetails({...details,Property_Age:e.target.value})}} >
+                <option value={"toilet"}>Property Age</option>
                 <option>Flat</option>
                 <option>House</option>
                 <option>Plot</option>
@@ -103,8 +113,8 @@ const BasicInfo = () => {
             <div>
             <span className="titles">Property Approved</span>
             <div className="selectBox">
-              <select defaultValue={"toilet"} className="selectBox">
-                <option value={"toilet"}>Western Toilet</option>
+              <select defaultValue={"toilet"} className="selectBox" onChange={(e)=>{setDetails({...details,Property_Approved:e.target.value})}} >
+                <option value={"toilet"}>Property Approved</option>
                 <option>Yes</option>
                 <option>NO</option>
               </select>
@@ -117,8 +127,8 @@ const BasicInfo = () => {
             <span className="titles">Property Description</span>
 
             <div className="selectBox">
-              <select defaultValue={"toilet"} className="selectBox">
-                <option value={"toilet"}>Western Toilet</option>
+              <select defaultValue={"toilet"} className="selectBox" onChange={(e)=>{setDetails({...details,Property_Description:e.target.value})}} >
+                <option value={"toilet"}>Property Description</option>
                 <option>Flat</option>
                 <option>House</option>
                 <option>Plot</option>
@@ -128,8 +138,8 @@ const BasicInfo = () => {
             <div>
             <span className="titles">Bank Loan</span>
             <div className="selectBox">
-              <select defaultValue={"toilet"} className="selectBox">
-                <option value={"toilet"}>Western Toilet</option>
+              <select defaultValue={"toilet"} className="selectBox" onChange={(e)=>{setDetails({...details,Bank_Loan:e.target.value})}} >
+                <option value={"toilet"}>Bank Loan</option>
                 <option>Yes</option>
                 <option>NO</option>
               </select>
@@ -144,7 +154,7 @@ const BasicInfo = () => {
       </div>
 
       <div className="newbutton">
-            <button>Save & Continue</button>
+            <button onClick={onContinue}   >Save & Continue</button>
         </div>
   
       
@@ -152,9 +162,12 @@ const BasicInfo = () => {
         
         </div>
         </div>
-         
 
       </div>
+
+
+  
+    </>
 
   
   
@@ -163,6 +176,7 @@ const BasicInfo = () => {
       
 
   
+
 
 
   );
