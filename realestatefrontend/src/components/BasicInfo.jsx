@@ -1,7 +1,9 @@
 import React from "react";
 
+
 //import Display from "./Display";
 import "./BasicInfo.css";
+
 
 import AddNewProperty from "./AddProperty";
 import Sidebar from "../SideBar/Sidebar";
@@ -12,6 +14,14 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Home from "../DisplayProp/Home";
 
+
+
+//import Dropdown from 'react-bootstrap/Dropdown';
+
+const BasicInfo = () => {   
+return (
+  <>
+ <div className="home">
 
 
 //import Dropdown from 'react-bootstrap/Dropdown';
@@ -28,6 +38,7 @@ const BasicInfo = () => {
     <>
 
 <div className="home">
+
   <div className="one"><Sidebar/></div>
   <div className="two">
     <Property  />
@@ -154,10 +165,22 @@ const BasicInfo = () => {
 
       </div>
 
+
   
     </>
+
+  
+  
+  
+  </>
+      
+
+  
+
+
 
   );
 };
 
 export default BasicInfo;
+
