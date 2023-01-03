@@ -8,31 +8,22 @@ import LocationInfo from './components/LocationInfo';
 import Home from './DisplayProp/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BasicInfo from './components/BasicInfo';
-import { useState } from 'react';
 
 
 
 function App() {
-
-
-
-
-  
-
-
   return (
 
  <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Signin />} />
+        <Route path="/" element={<Signin/>} />
         <Route path="/Signup" element={<Signup/>}/>
-        <Route path="/home" element={<Home/>} />
+       <Route path="/home" element={<Home/>} />
         <Route path="/BasicInfo" element={<BasicInfo/>} /> 
         <Route path="/PropertyDetail" element={<PropertyDetail/>} />
         <Route path="/GeneralInfo" element={<GeneralInfo/>} />
          <Route path="/LocationInfo" element={<LocationInfo/>} />
       </Routes>  
-
     </BrowserRouter>
      
   );

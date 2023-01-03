@@ -9,6 +9,8 @@ import "./PropertyDetail.css";
 //import Dropdown from 'react-bootstrap/Dropdown';
 
 const PropertyDetail = () => {
+
+  
   return (
     <>
 

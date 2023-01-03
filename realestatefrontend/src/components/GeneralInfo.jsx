@@ -1,9 +1,12 @@
 import React from "react";
 import "./GeneralInfo.css";
-
 import Property from "../DisplayProp/Property";
 import AddNewProperty from "./AddProperty";
 import Sidebar from "../SideBar/Sidebar";
+
+
+
+
 
 const GeneralInfo = () => {
   return (
@@ -92,6 +95,11 @@ const GeneralInfo = () => {
               </div>
             </div>
           </div>
+
+          <div className="filephoto">
+            <img src='https://cdn.iconscout.com/icon/premium/png-256-thumb/camera-274-123431.png' alt='pic' />
+            <input type="file" id="photo" name="file" style={{visibility:"hidden"}}/>
+        </div>
 
           <div className="newbuttoncontainer">
             <div className="newbutton">

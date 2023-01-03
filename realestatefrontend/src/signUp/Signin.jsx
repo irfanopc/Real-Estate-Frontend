@@ -14,11 +14,14 @@ function Signin() {
   const navigator = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [id, setId] = useState('')
+  // const [id, setId] = useState('')
 
   const onSignin = async (e) => {
     e.preventDefault();
-    await axios
+    try {
+
+
+      await axios
       .post(
         "/api/v1/signin",
         { email, password },
@@ -28,17 +31,26 @@ function Signin() {
           },
         }
       )
-      .then((data) => {
-        const paramId = (data.data.user._id) 
-        window.localStorage.setItem("id", paramId);      
-        window.localStorage.setItem("email", data.data.user.email);      
+      .then((data) => {    
+        console.log(data.message);
         if (data.message) {
-          return alert(data.message);
+          return alert(data.response.data.message);
         }
+
         alert(`user signin successfully`);
         navigator("/home");
+        const paramId = (data.data.user._id) 
+        window.localStorage.setItem("id", paramId);      
+        window.localStorage.setItem("email", data.data.user.email);
 
-      });
+      })
+      .catch((error)=> {
+        console.log(error);
+      })
+      
+    } catch (error) {
+      console.log(error);
+    }
       
   };
 
@@ -92,7 +104,6 @@ function Signin() {
           <pre>Don't have an account?</pre>
           <a href="/Signup">Sign up</a>
         </div>
-        <div></div>
       </div>
     </>
   );

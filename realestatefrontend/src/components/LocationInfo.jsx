@@ -2,11 +2,7 @@ import React from "react";
 import Property from "../DisplayProp/Property";
 import Sidebar from "../SideBar/Sidebar";
 import AddNewProperty from "./AddProperty";
-//import Display from "./Display";
-
 import "./LocationInfo.css";
-
-//import Dropdown from 'react-bootstrap/Dropdown';
 
 const LocationInfo = () => {
   return (

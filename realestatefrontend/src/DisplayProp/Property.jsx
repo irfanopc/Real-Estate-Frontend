@@ -1,12 +1,10 @@
 import axios from "axios";
-import React, { useState } from "react";
-// import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Uslogo from "./HomeLogo/uslogo.svg";
 import "./Property.css";
 
 const Property = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+ 
 
   const navigator = useNavigate()
 
@@ -18,7 +16,8 @@ const Property = () => {
     const handleLogout =  () => {
       axios.get('/api/v1/signout')
         .then((data)=> {
-          setIsAuthenticated(false);
+          localStorage.removeItem('email')
+          localStorage.removeItem('id')
            alert(data.data.massage);
           navigator("/");
         })

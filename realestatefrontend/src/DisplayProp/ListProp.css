@@ -44,3 +44,15 @@
     border-radius: 6px;
    cursor: pointer;
 }
+
+
+.noprop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14vmax;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aquamarine;
+
+}
