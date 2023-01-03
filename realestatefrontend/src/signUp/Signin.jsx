@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import "./Signup.css"
 import { useNavigate } from 'react-router-dom'
-import ListProp from '../DisplayProp/ListProp';
 
 function Signin() {
     const [passwordShown, setPasswordShown] = useState(false);
-    const [user,setUser] = useState("");
 
     const togglePasswordVisiblity = () => {
         setPasswordShown(passwordShown ? false : true);
@@ -14,7 +12,6 @@ function Signin() {
     const[signinData, setSigninData] = useState({email:"",password:""});
     const onSignin=(e)=>{
         e.preventDefault()
-
 fetch("http://localhost:5000/api/v1/signin",{
     method:"post",
     headers:{
@@ -22,23 +19,23 @@ fetch("http://localhost:5000/api/v1/signin",{
     },
     body:JSON.stringify({
         email:signinData.email,
-        password:signinData.password,
+        password:signinData.password
     })
 }).then(res=>res.json())
-.then((data)=>{;
-   // setUser(data);
-//    setUser((data.user.email));
-   console.log(user);
+.then(data=>{console.log(data);
     if(data.message){
         return alert(data.message)
     }
-    alert(`user signin successfully`)
-  
-    navigator("/home");
    
+    
+    window.localStorage.setItem("id",data.user._id );      
+        window.localStorage.setItem("email", data.user.email);
+    alert(`user signin successfully`)
+    navigator("/home");
 })
 
     }
+
     return (
         <>
             <div className="login-main" >
@@ -63,8 +60,6 @@ fetch("http://localhost:5000/api/v1/signin",{
   
         </div>
             </div>
-            <div>
-          </div>
         </>
     )
 }

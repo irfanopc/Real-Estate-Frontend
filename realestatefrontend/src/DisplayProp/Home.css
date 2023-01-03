@@ -14,5 +14,7 @@
 
 .two {
     width: 80%;
-    
+    position: relative;
+    height: 20vmax;
+    bottom: 0;
 }

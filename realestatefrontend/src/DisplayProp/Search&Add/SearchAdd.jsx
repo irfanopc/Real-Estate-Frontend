@@ -1,8 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import SerchLogo from '../HomeLogo/searchlogo.svg'
 import './Search.css'
 
 const SearchAdd = () => {
+    const navigator = useNavigate();
   return (
     <div className='searchadd'>
 
@@ -17,7 +19,7 @@ const SearchAdd = () => {
            
         </div>
         <div className="add">
-            <button>+ Add Property</button>
+            <button onClick={()=> navigator("/BasicInfo")}>+ Add Property</button>
         </div>
       
     </div>
