@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import "./Signup.css"
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -51,7 +51,7 @@ fetch("https://realestatebackend0.onrender.com/api/v1/signup",{
                 </form>
             </div>
             <div className='addition'>
-            <a href='/'>Sign in</a>
+          <Link to={"/"}>Sign in</Link>
             </div>
         </div>
 
