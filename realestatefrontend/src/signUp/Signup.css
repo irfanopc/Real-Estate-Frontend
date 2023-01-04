@@ -2,10 +2,7 @@
     margin: 0%;
     padding: 0%;
 }
-pre{
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
+
 .login-main{
     width: 100%;
     height: 100vh;
