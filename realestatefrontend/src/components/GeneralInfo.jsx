@@ -1,11 +1,15 @@
 import React from "react";
 import "./GeneralInfo.css";
-
 import Property from "../DisplayProp/Property";
 import AddNewProperty from "./AddProperty";
 import Sidebar from "../SideBar/Sidebar";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+
+
+
+
+
 
 const GeneralInfo = () => {
   const location = useLocation();
@@ -14,7 +18,7 @@ const details = ((location.state.details));
   const navigator =useNavigate()
   const [generalInfo,setGeneralInfo] = useState({ name:"",mobile:"",posted_by:"",saleType:"",featuredPackage:"",ppdPackage:"",file:null})
   const onContinue =()=>{
-   //console.log(generalInfo);
+   
     navigator("/LocationInfo",{state:{generalInfo,propertyDetails,details}})
   }
   return (
@@ -109,9 +113,10 @@ const details = ((location.state.details));
             <input type="file" id="photo" name="file" onChange={(e)=>{setGeneralInfo({...generalInfo,file:e.target.files[0]})}} />
         </div>
 
+
           <div className="newbuttoncontainer">
             <div className="newbutton">
-              <button onClick={()=>{navigator("/PropertyDetail")}}>Previous</button>
+              <button onClick={()=>{ navigator("/PropertyDetail",{state:{propertyDetails}})}}>Previous</button>
             </div>
 
             <div className="newbutton">
@@ -120,6 +125,8 @@ const details = ((location.state.details));
           </div>
         </section>
       </div>
+
+    
     </>
   );
 };

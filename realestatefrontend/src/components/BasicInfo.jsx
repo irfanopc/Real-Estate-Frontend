@@ -1,9 +1,7 @@
 import React from "react";
 
-
 //import Display from "./Display";
 import "./BasicInfo.css";
-
 
 import AddNewProperty from "./AddProperty";
 import Sidebar from "../SideBar/Sidebar";
@@ -13,15 +11,8 @@ import Property from "../DisplayProp/Property";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Home from "../DisplayProp/Home";
+import { useEffect } from "react";
 
-
-
-//import Dropdown from 'react-bootstrap/Dropdown';
-
-const BasicInfo = () => {   
-return (
-  <>
- <div className="home">
 
 
 //import Dropdown from 'react-bootstrap/Dropdown';
@@ -29,16 +20,22 @@ return (
 const BasicInfo = () => {
   const [details, setDetails] = useState({Property_Type:"",Negotiable:"",Price:"",Ownership:"",Property_Age:"",Property_Approved:"",Property_Description:"",Bank_Loan:""})
   const navigator = useNavigate();
-  const onContinue = () =>{
 
+
+
+  const onContinue = () =>{
      navigator("/PropertyDetail",{state:{details:details}});
   }
+
+
+ 
+
+  
   return (
 
     <>
 
 <div className="home">
-
   <div className="one"><Sidebar/></div>
   <div className="two">
     <Property  />
@@ -150,7 +147,7 @@ const BasicInfo = () => {
 
       <div className="newbuttoncontainer">
       <div className="newbutton">
-            <button>Previous</button>
+            <button onClick={()=>{navigator("/home")}}>Cancel</button>
       </div>
 
       <div className="newbutton">
@@ -165,22 +162,10 @@ const BasicInfo = () => {
 
       </div>
 
-
   
     </>
-
-  
-  
-  
-  </>
-      
-
-  
-
-
 
   );
 };
 
 export default BasicInfo;
-

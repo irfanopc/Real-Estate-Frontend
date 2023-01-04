@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import "./Signup.css"
 import { useNavigate } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+
 
 function Signin() {
     const [passwordShown, setPasswordShown] = useState(false);
@@ -15,7 +17,7 @@ function Signin() {
 fetch("http://localhost:5000/api/v1/signin",{
     method:"post",
     headers:{
-        "Content-Type" : "application/json"
+        "Content-Type" : "application/json",
     },
     body:JSON.stringify({
         email:signinData.email,
@@ -24,13 +26,13 @@ fetch("http://localhost:5000/api/v1/signin",{
 }).then(res=>res.json())
 .then(data=>{console.log(data);
     if(data.message){
-        return alert(data.message)
+        return toast.error(data.message)
     }
    
     
     window.localStorage.setItem("id",data.user._id );      
         window.localStorage.setItem("email", data.user.email);
-    alert(`user signin successfully`)
+    toast.success(`user signin successfully`)
     navigator("/home");
 })
 
@@ -60,6 +62,7 @@ fetch("http://localhost:5000/api/v1/signin",{
   
         </div>
             </div>
+            <ToastContainer/>
         </>
     )
 }

@@ -9,26 +9,18 @@ import Home from './DisplayProp/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BasicInfo from './components/BasicInfo';
 
-import PropertyDetail from './components/PropertyDetail';
 
-import { useState } from 'react';
+
 
 
 
 
 function App() {
-
-
-
-
-  
-
-
   return (
 
  <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Signin />} />
+        <Route path="/" element={<Signin/>} />
         <Route path="/Signup" element={<Signup/>}/>
         <Route path="/home" element={<Home/>} />
 

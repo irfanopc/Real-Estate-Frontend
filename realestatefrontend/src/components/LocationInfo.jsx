@@ -5,59 +5,38 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Property from "../DisplayProp/Property";
 import Sidebar from "../SideBar/Sidebar";
 import AddNewProperty from "./AddProperty";
-//import Display from "./Display";
-
 import "./LocationInfo.css";
-
-//import Dropdown from 'react-bootstrap/Dropdown';
 
 const LocationInfo = () => {
   const location = useLocation();
   const details =  (location.state.details);
-//console.log( details);
+
   const propertyDetails =  (location.state.propertyDetails);
   const generalInfo = location.state.generalInfo
-  // console.log(details);
-  // console.log(propertyDetails);
-  // console.log(generalInfo);
+  
   const navigator = useNavigate();
   const [locationInfo, setLocationInfo] = useState({email:"",city:"",area:"",pincode:"",address:"",landmark:"",latitude:"",longitude:"",})
-  const onAdd = async ()=>{
-    const allDetails = Object.assign(details, propertyDetails,generalInfo,locationInfo);
+  
+  
+  const allDetails = Object.assign(details, propertyDetails,generalInfo,locationInfo);
+
+      const onAdd = async ()=>{
     const formData = new FormData();
     formData.append("file",allDetails.file)
     formData.append("mobile",allDetails.mobile)
     formData.append("email",allDetails.email)
     console.log(formData.get("mobile"));
     try{
-      const response = await axios({
+      await axios({
         method: "post",
         url: "/userdetails",
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
     });
-    console.log(response);
     } catch (error) {
     console.log(error)
     } 
-navigator("/home")
-  
-//   const data = new FormData();
-//   data.append('postImage',form.file,form.file.name);
-//   data.append('name', form.name);
-//   data.append('location', form.location);
-//   data.append('description',form.description)
-//   console.log(data.postImage)
-// try {
-// const response = await axios({
-//     method: "post",
-//     url: "http://localhost:5000/instaclone/v1",
-//     data: data,
-//     headers: { "Content-Type": "multipart/form-data" },
-// });
-// console.log(response);
-// } catch (error) {
-// console.log(error)
+navigator("/home") 
  }
 
 
@@ -167,7 +146,7 @@ navigator("/home")
 
       <div className="newbuttoncontainer">
         <div className="newbutton">
-          <button>Previous</button>
+          <button onClick={()=>{ navigator("/GeneralInfo",{state:{locationInfo}})}}>Previous</button>
         </div>
 
         <div className="newbutton">
