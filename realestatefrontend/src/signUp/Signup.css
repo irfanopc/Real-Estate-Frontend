@@ -98,13 +98,15 @@ i {
     align-items: center;
     margin-top: 5%;
 }
-.addition>p{
+.addition>pre{
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0.25 px;
     font-size: Open Sans;
     color: #000000;
     text-align: center;
+        white-space: pre-wrap;
+word-wrap: break-word;
 }
 .addition>a{
     font-weight: 600;
