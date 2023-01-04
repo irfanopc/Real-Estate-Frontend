@@ -19,7 +19,7 @@ const SearchAdd = () => {
            
         </div>
         <div className="add">
-            <button onClick={()=> navigator("/BasicInfo")}>+ Add Property</button>
+            <button onClick={()=> navigator("/basicInfo")}>+ Add Property</button>
         </div>
       
     </div>

@@ -5,7 +5,7 @@ import Property from './Property'
 import SearchAdd from './Search&Add/SearchAdd'
 import './Home.css'
 
-const Home = ({details}) => {
+const Home = () => {
 console.log();
   
   return (
