@@ -11,6 +11,10 @@ import BasicInfo from './components/BasicInfo';
 
 
 
+
+
+
+
 function App() {
   return (
 
@@ -18,12 +22,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Signin/>} />
         <Route path="/Signup" element={<Signup/>}/>
-       <Route path="/home" element={<Home/>} />
+        <Route path="/home" element={<Home/>} />
+
         <Route path="/BasicInfo" element={<BasicInfo/>} /> 
         <Route path="/PropertyDetail" element={<PropertyDetail/>} />
         <Route path="/GeneralInfo" element={<GeneralInfo/>} />
          <Route path="/LocationInfo" element={<LocationInfo/>} />
       </Routes>  
+
+
     </BrowserRouter>
      
   );

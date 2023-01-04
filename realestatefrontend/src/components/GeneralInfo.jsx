@@ -3,12 +3,24 @@ import "./GeneralInfo.css";
 import Property from "../DisplayProp/Property";
 import AddNewProperty from "./AddProperty";
 import Sidebar from "../SideBar/Sidebar";
+import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+
 
 
 
 
 
 const GeneralInfo = () => {
+  const location = useLocation();
+const propertyDetails = ((location.state.propertyDetails));
+const details = ((location.state.details));
+  const navigator =useNavigate()
+  const [generalInfo,setGeneralInfo] = useState({ name:"",mobile:"",posted_by:"",saleType:"",featuredPackage:"",ppdPackage:"",file:null})
+  const onContinue =()=>{
+   
+    navigator("/LocationInfo",{state:{generalInfo,propertyDetails,details}})
+  }
   return (
     <>
       <div className="home">
@@ -18,15 +30,15 @@ const GeneralInfo = () => {
     </section>
 
         <section className="two">
-          <Property />
-          <AddNewProperty />
+          <Property  />
+          <AddNewProperty  />
           <div className="maincontainer">
             <div className="row">
               <div>
                 <span>Name</span>
 
                 <div className="selectBox">
-                  <select defaultValue={"toilet"} className="selectBox">
+                  <select defaultValue={"toilet"} className="selectBox" onChange={(e)=>{setGeneralInfo({...generalInfo,name:e.target.value})}} >
                     <option value={"toilet"}>Owner</option>
                     <option>Yes</option>
                     <option>NO</option>
@@ -37,10 +49,11 @@ const GeneralInfo = () => {
               <div>
                 <span>Mobile</span>
                 <div className="selectBox">
-                  <input
+                  <input 
                     className="selectBox"
-                    placeholder="Enter Mobile Number"
-                  />
+                    placeholder="Enter Mobile Number" type="text" required 
+                    onChange={(e)=>{setGeneralInfo({...generalInfo,mobile:e.target.value})}}
+                 />
                 </div>
               </div>
             </div>
@@ -50,7 +63,7 @@ const GeneralInfo = () => {
                 <span>Posted by</span>
 
                 <div className="selectBox">
-                  <select defaultValue={"toilet"} className="selectBox">
+                  <select defaultValue={"toilet"} className="selectBox" onChange={(e)=>{setGeneralInfo({...generalInfo,posted_by:e.target.value})}} >
                     <option value={"toilet"}>Posted by</option>
                     <option>Yes</option>
                     <option>NO</option>
@@ -61,7 +74,7 @@ const GeneralInfo = () => {
               <div>
                 <span>Sale Type</span>
                 <div className="selectBox">
-                  <select defaultValue={"toilet"} className="selectBox">
+                  <select defaultValue={"toilet"} className="selectBox" onChange={(e)=>{setGeneralInfo({...generalInfo,saleType:e.target.value})}} >
                     <option value={"toilet"}>Please Select</option>
                     <option>Yes</option>
                     <option>NO</option>
@@ -75,7 +88,7 @@ const GeneralInfo = () => {
                 <span>Featured Package</span>
 
                 <div className="selectBox">
-                  <select defaultValue={"toilet"} className="selectBox">
+                  <select defaultValue={"toilet"} className="selectBox" onChange={(e)=>{setGeneralInfo({...generalInfo,featuredPackage:e.target.value})}} >
                     <option value={"toilet"}>Please Select</option>
                     <option>Yes</option>
                     <option>NO</option>
@@ -86,7 +99,7 @@ const GeneralInfo = () => {
               <div>
                 <span>PPD Package</span>
                 <div className="selectBox">
-                  <select defaultValue={"toilet"} className="selectBox">
+                  <select defaultValue={"toilet"} className="selectBox" onChange={(e)=>{setGeneralInfo({...generalInfo,ppdPackage:e.target.value})}} >
                     <option value={"toilet"}>Please Select</option>
                     <option>Yes</option>
                     <option>NO</option>
@@ -95,23 +108,25 @@ const GeneralInfo = () => {
               </div>
             </div>
           </div>
-
           <div className="filephoto">
-            <img src='https://cdn.iconscout.com/icon/premium/png-256-thumb/camera-274-123431.png' alt='pic' />
-            <input type="file" id="photo" name="file" style={{visibility:"hidden"}}/>
+            <img src='https://cdn.iconscout.com/icon/premium/png-256-thumb/camera-274-123431.png' alt='pic'  />
+            <input type="file" id="photo" name="file" onChange={(e)=>{setGeneralInfo({...generalInfo,file:e.target.files[0]})}} />
         </div>
+
 
           <div className="newbuttoncontainer">
             <div className="newbutton">
-              <button>Previous</button>
+              <button onClick={()=>{ navigator("/PropertyDetail",{state:{propertyDetails}})}}>Previous</button>
             </div>
 
             <div className="newbutton">
-              <button>Save & Continue</button>
+              <button onClick={onContinue} >Save & Continue</button>
             </div>
           </div>
         </section>
       </div>
+
+    
     </>
   );
 };

@@ -9,12 +9,18 @@
 
 .one {
     width: 17%;
+    height: 100%;
     background-color: #e1f9f4;
 }
 
 .two {
     width: 80%;
+
+    height: 20vmax;
+    
+
     position: relative;
     height: 20vmax;
     bottom: 0;
+
 }

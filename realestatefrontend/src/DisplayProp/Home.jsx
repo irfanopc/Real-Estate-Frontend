@@ -55,7 +55,6 @@ const Home = () => {
       <ListProp/>
       </section>
 <div>
-{/* {posts && posts.map((post)=>{return console.log(post);})} */}
 </div>
     </div>
   )

@@ -1,13 +1,13 @@
 // import axios from 'axios';
 import React from 'react'
-// import { useEffect } from 'react';
-// import { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import SerchLogo from '../HomeLogo/searchlogo.svg'
 import './Search.css'
 
+
+
 const SearchAdd = () => {
-   
+    const navigator=useNavigate();
 
 
   return (

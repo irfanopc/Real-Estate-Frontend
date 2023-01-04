@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./AddProperty.css";
 const AddNewProperty = () => {   
 
     const [tab, setTab] = useState(window.location.pathname);
+
+    
+    const navigator=useNavigate();
 
     return ( 
         <>

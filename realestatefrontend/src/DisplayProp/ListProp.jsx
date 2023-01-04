@@ -10,13 +10,15 @@ import axios from "axios";
 const ListProp = () => {
   const [photo, setPhoto] = useState(false);
   const [status, setStatus] = useState(false);
-  const [count , setCount] = useState(0);
+ 
 
 
   const [clickedId, setClickeId] = useState('');
 
+  const [days, setDays] = useState(true);
 
-console.log(count);
+
+
   const [posts, setPosts] = useState();
 
   const id = window.localStorage.getItem("id");
@@ -25,9 +27,7 @@ console.log(count);
   useEffect(() => {
     axios.get(`/userdetails/${id}`)
       .then((data) => {
-        console.log(data);
         let user = data.data.userProperties;
-        console.log(user);
         const property = user.map((obj) => {
           return {
             property: obj.properties.map((prop) => prop),
@@ -44,7 +44,20 @@ console.log(count);
       });
   }, []);
 
-  // console.log(posts);
+  const [search, setSearch] = useState(false);
+  const [searchPpd, setSearchPpd] = useState('');
+
+useEffect(()=>{
+  axios('/search/PPID7025')
+  .then((data)=> {
+    setSearch(true)
+    setSearchPpd(data.data.List.ppdId)
+    console.log(searchPpd);
+  })
+
+},[])
+  
+
 
   return (
     <>
@@ -71,8 +84,8 @@ console.log(count);
                   <div
                     onClick={() => {
                       setPhoto(photo ? false : true);
-                      setCount(count+1)
                       setClickeId(data._id)
+                      setDays(false)
                     }}
                     className='imgClass'
                   >
@@ -85,12 +98,14 @@ console.log(count);
                   <div
                     onClick={() => {
                       setStatus(true);
+                      setClickeId(data._id)
+                      
                     }}
                     className= 'statusClass'
                   >
-                    {status ? "Sold" : ` ${data.status}`}
+                    {status && clickedId === data._id ?  "Sold": ` ${data.status}`}
                   </div>
-                  {status === true ? <p>00</p> : <div>{data.daysLeft}</div>}
+                  { days ===false && data._id === clickedId ? <p>00</p> : <div>{data.daysLeft}</div>}
                   <div className="action">
                     <img src={Eyelogo} alt="Eye" />
 

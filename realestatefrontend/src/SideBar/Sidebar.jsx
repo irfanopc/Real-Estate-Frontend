@@ -12,7 +12,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="list">
         <section className="logo">
-          <h1>Logo</h1>
+          <h1>L O G O</h1>
         </section>
 
         <section>
