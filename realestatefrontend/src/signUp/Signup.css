@@ -102,17 +102,16 @@ i {
     align-items: center;
     margin-top: 5%;
 }
-.addition>pre{
+.addition>p{
     font-weight: 400;
     font-size: 15px;
-    letter-spacing: 0.25 px;
     font-size: Open Sans;
     color: #000000;
-    text-align: center;
-        white-space: pre-wrap;
+    text-align: center;  
+    white-space: pre-wrap;
 word-wrap: break-word;
 }
-.addition>a{
+.addition{
     font-weight: 600;
     font-size: 18px;
     letter-spacing: 0.25 px;
