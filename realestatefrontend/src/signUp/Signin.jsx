@@ -76,14 +76,12 @@ function Signin() {
             </button>
           </form>
           <div id="login-a">
-            <a id="anchor" href="/signup">
-              Sign Up
-            </a>
+           <Link to={"/signup"}>Sign up</Link>
           </div>
         </div>
         <div className="addition">
-          <pre>Don't have an account?</pre>
-          <a href="/signup">Sign up</a>
+           <p>Don't have an account?</p>
+          <Link to={"/signup"}>Sign up</Link>
         </div>
         <div></div>
       </div>
