@@ -1,39 +1,35 @@
-
-
-
 .maincontainer {
-    width: 100%;
-    /* height: 100%; */
-    margin-top: 5vmax;
+  width: 100%;
+  /* height: 100%; */
+  margin-top: 5vmax;
 }
 
 .row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6vmax;
-    margin-top: 3vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6vmax;
+  margin-top: 3vmax;
 }
 
-.selectBox{
-    width: 25vmax;
-    height: 2.5vmax;
-    top: 428px;
-    left: 421px;
-    border: 1px solid #C3C3C3;
-    box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 400;
+.selectBox {
+  width: 25vmax;
+  height: 2.5vmax;
+  top: 428px;
+  left: 421px;
+  border: 1px solid #c3c3c3;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
-   line-height: 23px;
+  line-height: 23px;
 
-color: #7D7D7D;
+  color: #7d7d7d;
 }
 
 .rowdiff {
-    margin-left: 21.5vmax;
-    margin-top: 3vmax;
+  margin-left: 21.5vmax;
+  margin-top: 3vmax;
 }
-

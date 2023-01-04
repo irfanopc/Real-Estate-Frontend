@@ -20,12 +20,11 @@ const ListProp = () => {
 
 
   const [posts, setPosts] = useState();
-
   const id = window.localStorage.getItem("id");
 
-
   useEffect(() => {
-    axios.get(`/userdetails/${id}`)
+    axios
+      .get(`https://realestatebackend0.onrender.com/userdetails/${id}`)
       .then((data) => {
         let user = data.data.userProperties;
         const property = user.map((obj) => {
@@ -42,7 +41,7 @@ const ListProp = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [id]);
 
   const [search, setSearch] = useState(false);
   const [searchPpd, setSearchPpd] = useState('');
@@ -78,41 +77,41 @@ useEffect(()=>{
         {posts && posts.length > 0 ? (
           posts.map((data) => {
             return (
-              
-                <div className="dislist" key={data._id}>
-                  <div>{data.ppdId}</div>
-                  <div
-                    onClick={() => {
-                      setPhoto(photo ? false : true);
-                      setClickeId(data._id)
-                      setDays(false)
-                    }}
-                    className='imgClass'
-                  >
-                    <img src={ photo && clickedId === data._id ? data.siteImage : Imglogo } alt={"img"} />
-                  </div>
-                  <div>Plot</div>
-                  <div>{data.mobile}</div>
-                  <div>1200</div>
-                  <div>{data.views}</div>
-                  <div
-                    onClick={() => {
-                      setStatus(true);
-                      setClickeId(data._id)
-                      
-                    }}
-                    className= 'statusClass'
-                  >
-                    {status && clickedId === data._id ?  "Sold": ` ${data.status}`}
-                  </div>
-                  { days ===false && data._id === clickedId ? <p>00</p> : <div>{data.daysLeft}</div>}
-                  <div className="action">
-                    <img src={Eyelogo} alt="Eye" />
-
-                    <img src={Editlogo} alt="Edit" />
-                  </div>
+              <div className="dislist" key={data._id}>
+                <div>{data.ppdId}</div>
+                <div
+                  onClick={() => {
+                    setPhoto(photo ? false : true);
+                    setClickeId(data._id);
+                  }}
+                  className="imgClass"
+                >
+                  <img
+                    src={
+                      photo && clickedId === data._id ? data.siteImage : Imglogo
+                    }
+                    alt={"img"}
+                  />
                 </div>
-              
+                <div>Plot</div>
+                <div>{data.mobile}</div>
+                <div>1200</div>
+                <div>{data.views}</div>
+                <div
+                  onClick={() => {
+                    setStatus(true);
+                  }}
+                  className="statusClass"
+                >
+                  {status ? "Sold" : ` ${data.status}`}
+                </div>
+                {status === true ? <p>00</p> : <div>{data.daysLeft}</div>}
+                <div className="action">
+                  <img src={Eyelogo} alt="Eye" />
+
+                  <img src={Editlogo} alt="Edit" />
+                </div>
+              </div>
             );
           })
         ) : (

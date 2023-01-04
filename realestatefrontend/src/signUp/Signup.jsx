@@ -14,7 +14,7 @@ function Signup() {
     if(data.password !==data.cpassword){
         return toast.error(`password doesn't match`)
     }
-fetch("http://localhost:5000/api/v1/signup",{
+fetch("https://realestatebackend0.onrender.com/api/v1/signup",{
     method:"post",
     headers:{
         "Content-Type" : "application/json"
@@ -25,9 +25,9 @@ fetch("http://localhost:5000/api/v1/signup",{
         confirmpassword:data.cpassword
     })
 }).then(res=>res.json())
-.then(data=>{
-    if(data.message === "user already exist"){
-        return toast.error("user already exist")
+.then((data)=>{
+    if(data.message==="user already exist"){
+        return alert("user already exist")
     }
     toast.success(`user signup successfully`)
     navigator("/");

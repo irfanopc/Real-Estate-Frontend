@@ -20,14 +20,13 @@ function App() {
 
  <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Signin/>} />
-        <Route path="/Signup" element={<Signup/>}/>
+        <Route path="/" element={<Signin />} />
+        <Route path="/signup" element={<Signup/>}/>
         <Route path="/home" element={<Home/>} />
-
-        <Route path="/BasicInfo" element={<BasicInfo/>} /> 
-        <Route path="/PropertyDetail" element={<PropertyDetail/>} />
-        <Route path="/GeneralInfo" element={<GeneralInfo/>} />
-         <Route path="/LocationInfo" element={<LocationInfo/>} />
+        <Route path="/basicInfo" element={<BasicInfo/>} /> 
+        <Route path="/propertyDetail" element={<PropertyDetail/>} />
+        <Route path="/generalInfo" element={<GeneralInfo/>} />
+         <Route path="/locationInfo" element={<LocationInfo/>} />
       </Routes>  
 
 

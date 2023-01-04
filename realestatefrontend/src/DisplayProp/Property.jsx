@@ -16,7 +16,7 @@ const Property = () => {
 
 
     const handleLogout =  () => {
-      axios.get('/api/v1/signout')
+      axios.get('https://realestatebackend0.onrender.com/api/v1/signout')
         .then((data)=> {
           localStorage.removeItem('email')
           localStorage.removeItem('id')
