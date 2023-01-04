@@ -1,11 +1,15 @@
 import React from "react";
 import "./GeneralInfo.css";
-
 import Property from "../DisplayProp/Property";
 import AddNewProperty from "./AddProperty";
 import Sidebar from "../SideBar/Sidebar";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+
+
+
+
+
 
 const GeneralInfo = () => {
   const location = useLocation();
@@ -178,6 +182,7 @@ const GeneralInfo = () => {
             />
           </div>
 
+
           <div className="newbuttoncontainer">
             <div className="newbutton">
               <button
@@ -195,6 +200,8 @@ const GeneralInfo = () => {
           </div>
         </section>
       </div>
+
+    
     </>
   );
 };

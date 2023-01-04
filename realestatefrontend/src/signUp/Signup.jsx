@@ -2,13 +2,17 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import "./Signup.css"
+import { ToastContainer, toast } from 'react-toastify';
+
+
+
 function Signup() {
    const [data,setData] = useState({email :"",password:"",cpassword:""})
    const navigator=useNavigate();
    const onSubmit=(e)=>{
     e.preventDefault()
     if(data.password !==data.cpassword){
-        return alert(`password doesn't match`)
+        return toast.error(`password doesn't match`)
     }
 fetch("https://realestatebackend0.onrender.com/api/v1/signup",{
     method:"post",
@@ -25,7 +29,7 @@ fetch("https://realestatebackend0.onrender.com/api/v1/signup",{
     if(data.message==="user already exist"){
         return alert("user already exist")
     }
-    alert(`user signup successfully`)
+    toast.success(`user signup successfully`)
     navigator("/");
 })
 
@@ -50,6 +54,8 @@ fetch("https://realestatebackend0.onrender.com/api/v1/signup",{
             <a href='/'>Sign in</a>
             </div>
         </div>
+
+        <ToastContainer/>
         </>
 
     )

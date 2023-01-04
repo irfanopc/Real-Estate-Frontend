@@ -8,18 +8,14 @@ import LocationInfo from './components/LocationInfo';
 import Home from './DisplayProp/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BasicInfo from './components/BasicInfo';
-import { useState } from 'react';
+
+
+
+
 
 
 
 function App() {
-
-
-
-
-  
-
-
   return (
 
  <BrowserRouter>
@@ -32,6 +28,7 @@ function App() {
         <Route path="/generalInfo" element={<GeneralInfo/>} />
          <Route path="/locationInfo" element={<LocationInfo/>} />
       </Routes>  
+
 
     </BrowserRouter>
      

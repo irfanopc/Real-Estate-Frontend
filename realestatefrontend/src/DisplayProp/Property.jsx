@@ -2,6 +2,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Uslogo from "./HomeLogo/uslogo.svg";
 import "./Property.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Property = () => {
  
@@ -18,7 +20,7 @@ const Property = () => {
         .then((data)=> {
           localStorage.removeItem('email')
           localStorage.removeItem('id')
-           alert(data.data.massage);
+           toast.success(data.data.massage);
           navigator("/");
         })
         .catch((error)=>{
@@ -54,7 +56,9 @@ const Property = () => {
           </section>
         </div>
       </div>
+      <ToastContainer/>
     </div>
+
   );
 };
 

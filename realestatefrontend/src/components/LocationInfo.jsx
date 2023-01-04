@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import Property from "../DisplayProp/Property";
 import Sidebar from "../SideBar/Sidebar";
 import AddNewProperty from "./AddProperty";
@@ -54,6 +55,7 @@ const LocationInfo = () => {
     } catch (error) {
       console.log(error);
     }
+    alert("properties added successfully")
     navigator("/home");
   };
 
