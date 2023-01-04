@@ -82,7 +82,7 @@ function Signin() {
           </div>
         </div>
         <div className="addition">
-          <p>Don't have an account?</p>
+          <pre>Don't have an account?</pre>
           <a href="/signup">Sign up</a>
         </div>
         <div></div>
