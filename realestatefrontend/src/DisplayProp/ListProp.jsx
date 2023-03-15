@@ -6,25 +6,24 @@ import Editlogo from "./HomeLogo/editlogo.svg";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import store from "../store";
 
 const ListProp = () => {
   const [photo, setPhoto] = useState(false);
   const [status, setStatus] = useState(false);
- 
-
-
-  const [clickedId, setClickeId] = useState('');
+   const [clickedId, setClickeId] = useState('');
 
   const [days, setDays] = useState(true);
 
 
 
   const [posts, setPosts] = useState();
-  const id = window.localStorage.getItem("id");
+  const id = store.getState().userId;
+  console.log(id);
 
   useEffect(() => {
     axios
-      .get(`https://realestatebackend0.onrender.com/userdetails/${id}`)
+      .get(`/userdetails/${id}`) 
       .then((data) => {
         let user = data.data.userProperties;
         const property = user.map((obj) => {
@@ -43,18 +42,20 @@ const ListProp = () => {
       });
   }, [id]);
 
-  const [search, setSearch] = useState(false);
-  const [searchPpd, setSearchPpd] = useState('');
 
-useEffect(()=>{
-  axios('/search/PPID7025')
-  .then((data)=> {
-    setSearch(true)
-    setSearchPpd(data.data.List.ppdId)
-    console.log(searchPpd);
-  })
 
-},[])
+  // const [search, setSearch] = useState(false);
+  // const [searchPpd, setSearchPpd] = useState('');
+
+// useEffect(()=>{
+//   axios('/search/PPID7025')
+//   .then((data)=> {
+//     setSearch(true)
+//     setSearchPpd(data.data.List.ppdId)
+//     console.log(searchPpd);
+//   })
+
+// },[])
   
 
 

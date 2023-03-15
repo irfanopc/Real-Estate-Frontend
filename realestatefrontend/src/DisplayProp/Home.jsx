@@ -12,8 +12,9 @@ import axios from 'axios'
 
 const Home = () => {
 
+  
+  
   // const navigator = useNavigate();
-
   // const [value, setValue] = useState();
   // const [searchData, setSearchData] = useState();
   // console.log(searchData);

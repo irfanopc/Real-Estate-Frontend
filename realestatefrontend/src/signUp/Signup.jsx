@@ -1,40 +1,41 @@
 import React from 'react'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import "./Signup.css"
 import { ToastContainer, toast } from 'react-toastify';
+import axios from 'axios';
 
 
 
 function Signup() {
    const [data,setData] = useState({email :"",password:"",cpassword:""})
    const navigator=useNavigate();
-   const onSubmit=(e)=>{
-    e.preventDefault()
-    if(data.password !==data.cpassword){
-        return toast.error(`password doesn't match`)
+   const onSubmit = (e) => {
+    e.preventDefault();
+  
+    if (data.password !== data.cpassword) {
+      return toast.error(`password doesn't match`);
     }
-fetch("https://realestatebackend0.onrender.com/api/v1/signup",{
-    method:"post",
-    headers:{
-        "Content-Type" : "application/json"
-    },
-    body:JSON.stringify({
-        email:data.email,
-        password:data.password,
-        confirmpassword:data.cpassword
+  
+    axios.post('/api/v1/signup', {
+      email: data.email,
+      password: data.password,
+      confirmpassword: data.cpassword,
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
     })
-}).then(res=>res.json())
-.then((data)=>{
-    if(data.message==="user already exist"){
-        return alert("user already exist")
-    }
-    toast.success(`user signup successfully`)
-    navigator("/");
-})
-
-    
-}
+    .then((response) => {
+     console.log(response);
+        alert(`user signedup successfully`)
+        navigator('/');
+    })
+    .catch((error) => {
+      alert(error.response.data.message);
+    });
+  };
+  
 
     return (
 
@@ -51,7 +52,11 @@ fetch("https://realestatebackend0.onrender.com/api/v1/signup",{
                 </form>
             </div>
             <div className='addition'>
-            <a href='/'>Sign in</a>
+
+            
+            <Link to={"/"}>Sign in</Link>
+
+    
             </div>
         </div>
 
