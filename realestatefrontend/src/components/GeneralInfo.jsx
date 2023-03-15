@@ -45,7 +45,7 @@ const GeneralInfo = () => {
           <div className="maincontainer">
             <div className="row">
               <div>
-                <span>Name</span>
+                <span>Name(required)</span>
 
                 <div className="selectBox">
                   <select
@@ -55,7 +55,7 @@ const GeneralInfo = () => {
                       setGeneralInfo({ ...generalInfo, name: e.target.value });
                     }}
                   >
-                    <option value={"toilet"}>Owner</option>
+                    <option value={"toilet"}>Owner(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -63,7 +63,7 @@ const GeneralInfo = () => {
               </div>
 
               <div>
-                <span>Mobile</span>
+                <span>Mobile(required)</span>
                 <div className="selectBox">
                   <input
                     className="selectBox"
@@ -83,7 +83,7 @@ const GeneralInfo = () => {
 
             <div className="row">
               <div>
-                <span>Posted by</span>
+                <span>Posted by(optional)</span>
 
                 <div className="selectBox">
                   <select
@@ -96,7 +96,7 @@ const GeneralInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Posted by</option>
+                    <option value={"toilet"}>Posted by(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -104,7 +104,7 @@ const GeneralInfo = () => {
               </div>
 
               <div>
-                <span>Sale Type</span>
+                <span>Sale Type(optional)</span>
                 <div className="selectBox">
                   <select
                     defaultValue={"toilet"}
@@ -116,7 +116,7 @@ const GeneralInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Please Select</option>
+                    <option value={"toilet"}>Please Select(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -126,7 +126,7 @@ const GeneralInfo = () => {
 
             <div className="row">
               <div>
-                <span>Featured Package</span>
+                <span>Featured Package(optional)</span>
 
                 <div className="selectBox">
                   <select
@@ -139,7 +139,7 @@ const GeneralInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Please Select</option>
+                    <option value={"toilet"}>Please Select(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -147,7 +147,7 @@ const GeneralInfo = () => {
               </div>
 
               <div>
-                <span>PPD Package</span>
+                <span>PPD Package(optional)</span>
                 <div className="selectBox">
                   <select
                     defaultValue={"toilet"}
@@ -159,7 +159,7 @@ const GeneralInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Please Select</option>
+                    <option value={"toilet"}>Please Select(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>

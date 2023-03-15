@@ -36,7 +36,7 @@ const BasicInfo = () => {
           <div className="maincontainer">
             <div className="row">
               <div>
-                <span className="titles">Property Type</span>
+                <span className="titles">Property Type (optional)</span>
 
                 <div className="selectBox">
                   <select
@@ -49,7 +49,7 @@ const BasicInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Select propety Type</option>
+                    <option value={"toilet"}>Select propety Type (optional)</option>
                     <option>Flat</option>
                     <option>House</option>
                     <option>Plot</option>
@@ -57,7 +57,7 @@ const BasicInfo = () => {
                 </div>
               </div>
               <div>
-                <span className="titles">Negotiable</span>
+                <span className="titles">Negotiable (optional)</span>
                 <div className="selectBox">
                   <select
                     defaultValue={"toilet"}
@@ -69,7 +69,7 @@ const BasicInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Select Negotiable</option>
+                    <option value={"toilet"}>Select Negotiable </option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -79,7 +79,7 @@ const BasicInfo = () => {
 
             <div className="row">
               <div>
-                <span className="titles">Price</span>
+                <span className="titles">Price (optional)</span>
 
                 <div className="selectBox">
                   <select
@@ -89,7 +89,7 @@ const BasicInfo = () => {
                       setDetails({ ...basicDetails, Price: e.target.value });
                     }}
                   >
-                    <option value={"toilet"}>Example price</option>
+                    <option value={"toilet"}>Example price (optional)</option>
                     <option>Flat</option>
                     <option>House</option>
                     <option>Plot</option>
@@ -97,7 +97,7 @@ const BasicInfo = () => {
                 </div>
               </div>
               <div>
-                <span className="titles">Ownership</span>
+                <span className="titles">Ownership (optional)</span>
                 <div className="selectBox">
                   <select
                     defaultValue={"toilet"}
@@ -109,7 +109,7 @@ const BasicInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Select Ownership</option>
+                    <option value={"toilet"}>Select Ownership (optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -119,7 +119,7 @@ const BasicInfo = () => {
 
             <div className="row">
               <div>
-                <span className="titles">Property Age</span>
+                <span className="titles">Property Age(optional) </span>
 
                 <div className="selectBox">
                   <select
@@ -132,7 +132,7 @@ const BasicInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Property Age</option>
+                    <option value={"toilet"}>Property Age(optional)</option>
                     <option>Flat</option>
                     <option>House</option>
                     <option>Plot</option>
@@ -140,7 +140,7 @@ const BasicInfo = () => {
                 </div>
               </div>
               <div>
-                <span className="titles">Property Approved</span>
+                <span className="titles">Property Approved(optional)</span>
                 <div className="selectBox">
                   <select
                     defaultValue={"toilet"}
@@ -152,7 +152,7 @@ const BasicInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Property Approved</option>
+                    <option value={"toilet"}>Property Approved(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -162,7 +162,7 @@ const BasicInfo = () => {
 
             <div className="row">
               <div>
-                <span className="titles">Property Description</span>
+                <span className="titles">Property Description(optional)</span>
 
                 <div className="selectBox">
                   <select
@@ -175,7 +175,7 @@ const BasicInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Property Description</option>
+                    <option value={"toilet"}>Property Description(optional)</option>
                     <option>Flat</option>
                     <option>House</option>
                     <option>Plot</option>
@@ -183,7 +183,7 @@ const BasicInfo = () => {
                 </div>
               </div>
               <div>
-                <span className="titles">Bank Loan</span>
+                <span className="titles">Bank Loan(optional)</span>
                 <div className="selectBox">
                   <select
                     defaultValue={"toilet"}
@@ -195,7 +195,7 @@ const BasicInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Bank Loan</option>
+                    <option value={"toilet"}>Bank Loan(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>

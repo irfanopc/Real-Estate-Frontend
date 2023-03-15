@@ -48,7 +48,7 @@ const PropertyDetail = () => {
           <div className="maincontainerpro">
             <div className="row11">
               <div>
-                <span>Length</span>
+                <span>Length(optional)</span>
 
                 <div className="selectBoxpro">
                   <input
@@ -65,7 +65,7 @@ const PropertyDetail = () => {
               </div>
 
               <div>
-                <span>Breadth</span>
+                <span>Breadth(optional)</span>
                 <div className="selectBoxpro">
                   <input
                     className="selectBoxpro"
@@ -83,7 +83,7 @@ const PropertyDetail = () => {
 
             <div className="row11">
               <div>
-                <span>Total Area</span>
+                <span>Total Area(optional)</span>
 
                 <div className="selectBoxpro">
                   <input
@@ -100,7 +100,7 @@ const PropertyDetail = () => {
               </div>
 
               <div>
-                <span>Area Unit</span>
+                <span>Area Unit(optional)</span>
                 <div className="selectBoxpro">
                   <select
                     defaultValue={"Area"}
@@ -112,7 +112,7 @@ const PropertyDetail = () => {
                       });
                     }}
                   >
-                    <option value={"Area"}>Area Unit</option>
+                    <option value={"Area"}>Area Unit(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -122,7 +122,7 @@ const PropertyDetail = () => {
 
             <div className="row11">
               <div>
-                <span>No Of BHK</span>
+                <span>No Of BHK(optional)</span>
 
                 <div className="selectBoxpro">
                   <select
@@ -135,7 +135,7 @@ const PropertyDetail = () => {
                       });
                     }}
                   >
-                    <option value={"BHk"}>Select No fo BHK</option>
+                    <option value={"BHk"}>Select No fo BHK(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -143,7 +143,7 @@ const PropertyDetail = () => {
               </div>
 
               <div>
-                <span>No Of Floor</span>
+                <span>No Of Floor(optional)</span>
                 <div className="selectBoxpro">
                   <select
                     defaultValue={"Floor"}
@@ -155,7 +155,7 @@ const PropertyDetail = () => {
                       });
                     }}
                   >
-                    <option value={"floor"}>Select No fo Floor</option>
+                    <option value={"floor"}>Select No fo Floor(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -165,7 +165,7 @@ const PropertyDetail = () => {
 
             <div className="row11">
               <div>
-                <span>Attached</span>
+                <span>Attached(optional)</span>
 
                 <div className="selectBoxpro">
                   <select
@@ -178,7 +178,7 @@ const PropertyDetail = () => {
                       });
                     }}
                   >
-                    <option value={"Attached"}>Select Attached</option>
+                    <option value={"Attached"}>Select Attached(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -186,7 +186,7 @@ const PropertyDetail = () => {
               </div>
 
               <div>
-                <span>Weastern Toilet</span>
+                <span>Weastern Toilet(optional)</span>
                 <div className="selectBoxpro">
                   <select
                     defaultValue={"toilet"}
@@ -198,7 +198,7 @@ const PropertyDetail = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}> Select Western Toilet</option>
+                    <option value={"toilet"}> Select Western Toilet(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -208,7 +208,7 @@ const PropertyDetail = () => {
 
             <div className="row11">
               <div>
-                <span>Furnished</span>
+                <span>Furnished(optional)</span>
 
                 <div className="selectBoxpro">
                   <select
@@ -221,7 +221,7 @@ const PropertyDetail = () => {
                       });
                     }}
                   >
-                    <option value={"Furnished"}>Select Furnished</option>
+                    <option value={"Furnished"}>Select Furnished(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -229,7 +229,7 @@ const PropertyDetail = () => {
               </div>
 
               <div>
-                <span>Car Parking</span>
+                <span>Car Parking(optional)</span>
                 <div className="selectBoxpro">
                   <select
                     defaultValue={"Parking"}
@@ -241,7 +241,7 @@ const PropertyDetail = () => {
                       });
                     }}
                   >
-                    <option value={"Parking"}>Select Car Parking</option>
+                    <option value={"Parking"}>Select Car Parking(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -251,7 +251,7 @@ const PropertyDetail = () => {
 
             <div className="row11">
               <div>
-                <span className="titles">Lift</span>
+                <span className="titles">Lift(optional)</span>
 
                 <div className="selectBoxpro">
                   <select
@@ -264,7 +264,7 @@ const PropertyDetail = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Western Toilet</option>
+                    <option value={"toilet"}>Western Toilet(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -272,7 +272,7 @@ const PropertyDetail = () => {
               </div>
 
               <div>
-                <span className="titles">Electricity</span>
+                <span className="titles">Electricity(optional)</span>
                 <div className="selectBoxpro">
                   <select
                     defaultValue={"toilet"}
@@ -284,7 +284,7 @@ const PropertyDetail = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Western Toilet</option>
+                    <option value={"toilet"}>Western Toilet(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -294,7 +294,7 @@ const PropertyDetail = () => {
 
             <div className="row11diff">
               <div>
-                <span className="titles">Facing</span>
+                <span className="titles">Facing(optional)</span>
 
                 <div className="selectBoxpro">
                   <select
@@ -307,7 +307,7 @@ const PropertyDetail = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Western Toilet</option>
+                    <option value={"toilet"}>Western Toilet(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
