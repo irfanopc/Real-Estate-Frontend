@@ -80,7 +80,7 @@ const LocationInfo = () => {
           <div className="maincontainer">
             <div className="row">
               <div>
-                <span>Email</span>
+                <span>Email(required)</span>
 
                 <div className="selectBox">
                   <input
@@ -97,7 +97,7 @@ const LocationInfo = () => {
               </div>
 
               <div>
-                <span>City</span>
+                <span>City(optional)</span>
                 <div className="selectBox">
                   <select
                     defaultValue={"toilet"}
@@ -109,7 +109,7 @@ const LocationInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Select City</option>
+                    <option value={"toilet"}>Select City(optional)</option>
                     <option>Delhi</option>
                     <option>Ranchi</option>
                   </select>
@@ -119,7 +119,7 @@ const LocationInfo = () => {
 
             <div className="row">
               <div>
-                <span> Area</span>
+                <span> Area(optional)</span>
 
                 <div className="selectBox">
                   <select
@@ -132,7 +132,7 @@ const LocationInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Select Area</option>
+                    <option value={"toilet"}>Select Area(optional)</option>
                     <option>Yes</option>
                     <option>NO</option>
                   </select>
@@ -140,7 +140,7 @@ const LocationInfo = () => {
               </div>
 
               <div>
-                <span>Pincode</span>
+                <span>Pincode(optional)</span>
                 <div className="selectBox">
                   <select
                     defaultValue={"toilet"}
@@ -152,7 +152,7 @@ const LocationInfo = () => {
                       });
                     }}
                   >
-                    <option value={"toilet"}>Select Pincode</option>
+                    <option value={"toilet"}>Select Pincode(optional)</option>
                     <option>834004</option>
                     <option>834001</option>
                   </select>
@@ -162,7 +162,7 @@ const LocationInfo = () => {
 
             <div className="row">
               <div>
-                <span>Address</span>
+                <span>Address(optional)</span>
 
                 <div className="selectBox">
                   <input
@@ -179,7 +179,7 @@ const LocationInfo = () => {
               </div>
 
               <div>
-                <span>Landmark</span>
+                <span>Landmark(optional)</span>
                 <div className="selectBox">
                   <input
                     className="selectBox"
@@ -197,7 +197,7 @@ const LocationInfo = () => {
 
             <div className="row">
               <div>
-                <span>Latitude</span>
+                <span>Latitude(optional)</span>
 
                 <div className="selectBox">
                   <input
@@ -214,7 +214,7 @@ const LocationInfo = () => {
               </div>
 
               <div>
-                <span>Longitude</span>
+                <span>Longitude(optional)</span>
                 <div className="selectBox">
                   <input
                     className="selectBox"

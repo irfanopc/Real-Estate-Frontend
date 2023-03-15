@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Signup.css";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 
 import axios from "axios";
 import store from "../store";
@@ -8,6 +9,9 @@ import store from "../store";
 
 function Signin() {
   const [passwordShown, setPasswordShown] = useState(false);
+
+ 
+
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
@@ -16,6 +20,8 @@ function Signin() {
 
   const onSignin = (e) => {
     e.preventDefault();
+
+      if ( signinData.email === '' || signinData.password === '')  toast.error('all fields are required')
   
     axios.post('/api/v1/signin', {
       email: signinData.email,
@@ -44,9 +50,12 @@ function Signin() {
       navigator('/home');
     })
     .catch((error) => {
+   
       alert(error.response.data.message)
     });
   };
+
+ 
   
   return (
     <>
@@ -58,6 +67,7 @@ function Signin() {
             Enter your credentials to access your account
           </div>
           <form className="login-form">
+           
             <input
               className="login-input"
               type="email"
@@ -67,6 +77,7 @@ function Signin() {
               onChange={(e) => {
                 setSigninData({ ...signinData, email: e.target.value });
               }}
+             
             />
 
             <input
@@ -110,7 +121,7 @@ function Signin() {
         </div>
         <div></div>
     
-      
+        <ToastContainer/>
     </>
   );
 }
