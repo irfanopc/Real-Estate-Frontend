@@ -62,7 +62,7 @@ function Signin() {
   
       <div className="login-main">
         <div className="login-box">
-          <div className="login-logo">LOGO</div>
+          <div className="login-logo">L O G O</div>
           <div className="login-para">
             Enter your credentials to access your account
           </div>
