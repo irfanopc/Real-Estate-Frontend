@@ -105,12 +105,11 @@ function Signin() {
           </div>
         </div>
         <div className="addition">
-           <p>Don't have an account?</p>
-          <Link to={"/signup"}>Sign up</Link>
-
+          <pre>Don't have an account?</pre>
+          <a href="/signup">Sign up</a>
         </div>
         <div></div>
-      </div>
+    
       
     </>
   );
