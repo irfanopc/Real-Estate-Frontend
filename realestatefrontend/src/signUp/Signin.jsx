@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./Signup.css";
 import { Link, useNavigate } from "react-router-dom";
+
 import axios from "axios";
 import store from "../store";
+
 
 function Signin() {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -88,6 +90,7 @@ function Signin() {
             </button>
           </form>
           <div id="login-a">
+
           <Link to={"/signup"}>Sign up</Link>
              
           
@@ -97,6 +100,14 @@ function Signin() {
           <p>Don't have an account?</p>
           <Link to={"/signup"}>Sign up</Link>
           {/* <a href="/signup">Sign up</a> */}
+
+           <Link to={"/signup"}>Sign up</Link>
+          </div>
+        </div>
+        <div className="addition">
+           <p>Don't have an account?</p>
+          <Link to={"/signup"}>Sign up</Link>
+
         </div>
         <div></div>
       </div>

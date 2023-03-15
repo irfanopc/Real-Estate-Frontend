@@ -52,8 +52,11 @@ function Signup() {
                 </form>
             </div>
             <div className='addition'>
+
             
             <Link to={"/"}>Sign in</Link>
+
+    
             </div>
         </div>
 
