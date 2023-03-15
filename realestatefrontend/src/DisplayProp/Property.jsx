@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Uslogo from "./HomeLogo/uslogo.svg";
 import "./Property.css";
 import { ToastContainer, toast } from 'react-toastify';
-
+import 'react-toastify/dist/ReactToastify.css';
 
 const Property = () => {
  
@@ -16,7 +16,7 @@ const Property = () => {
 
 
     const handleLogout =  () => {
-      axios.get('/api/v1/signout')
+      axios.get('https://realestatebackend0.onrender.com/api/v1/signout')
         .then((data)=> {
           localStorage.removeItem('email')
           localStorage.removeItem('id')
