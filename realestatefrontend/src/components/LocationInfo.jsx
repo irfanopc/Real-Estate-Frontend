@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Property from "../DisplayProp/Property";
 import Sidebar from "../SideBar/Sidebar";
+import store from "../store";
 import AddNewProperty from "./AddProperty";
 import "./LocationInfo.css";
 
@@ -36,6 +37,12 @@ const LocationInfo = () => {
     generalInfo,
     locationInfo
   );
+
+  const addUserDetails = (formData) => ({
+    type: 'ADD_USER_DETAILS',
+    payload: formData,
+  });
+  
   const onAdd = async () => {
    
     const formData = new FormData();
@@ -43,11 +50,12 @@ const LocationInfo = () => {
     formData.append("file", allDetails.file);
     formData.append("mobile", allDetails.mobile);
     formData.append("email", allDetails.email);
+    store.dispatch(addUserDetails(formData));
     // console.log(formData.get("email"));
     try {
       const response = await axios({
         method: "post",
-        url: "https://realestatebackend0.onrender.com/userdetails",
+        url: "/userdetails",
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       });

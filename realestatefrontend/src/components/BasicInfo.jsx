@@ -20,9 +20,8 @@ const BasicInfo = () => {
     Property_Description: "",
     Bank_Loan: "",
   });
-
   const onContinue = () => {
-    navigator("/propertyDetail", { state: { basicDetails: basicDetails } });
+    navigator("/propertyDetail", { state: { basicDetails: basicDetails}});
   };
   
   return (

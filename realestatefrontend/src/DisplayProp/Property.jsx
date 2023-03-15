@@ -4,23 +4,24 @@ import Uslogo from "./HomeLogo/uslogo.svg";
 import "./Property.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import store from "../store";
 
 const Property = () => {
  
 
   const navigator = useNavigate()
 
-  let email = window.localStorage.getItem('email');
+  const email = store.getState().email;
+  console.log(email);
   let setemail = email.split('@')[0]
 
 
 
     const handleLogout =  () => {
-      axios.get('https://realestatebackend0.onrender.com/api/v1/signout')
+      axios.get('/api/v1/signout')
         .then((data)=> {
-          localStorage.removeItem('email')
-          localStorage.removeItem('id')
-           toast.success(data.data.massage);
+          store.dispatch({ type: 'LOGOUT' });
+           alert(data.data.massage);
           navigator("/");
         })
         .catch((error)=>{
