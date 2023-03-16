@@ -109,7 +109,7 @@ function Signin() {
         </div>
         <div className="addition">
           <p>Don't have an account?</p>
-          <Link to={"/signup"}>Sign up</Link>
+     
           {/* <a href="/signup">Sign up</a> */}
 
            <Link to={"/signup"}>Sign up</Link>
