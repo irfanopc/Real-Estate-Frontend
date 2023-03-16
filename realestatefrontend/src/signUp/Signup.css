@@ -2,6 +2,7 @@
     margin: 0%;
     padding: 0%;
 }
+
 .login-main{
     width: 100%;
     height: 100vh;
@@ -80,7 +81,16 @@ i {
     border-radius: 5px;
     margin-top: 3%;
     background-color: #4C57B6;
+    cursor: pointer;
 }
+
+.login-btn:hover {
+    color: rgb(0, 100, 193);
+    background-color: rgb(223, 192, 192);
+    box-sizing: border-box;
+    box-shadow: #00fcb6;
+}
+
 #login-a{
     margin-top: 3%;
     font-weight: 600;
@@ -91,7 +101,7 @@ i {
 }
 #anchor{
     text-decoration: none;
-}
+}  
 .addition{
     display: flex;
     justify-content: center;
@@ -116,4 +126,8 @@ word-wrap: break-word;
     text-align: center;
     text-decoration: none;
     
+}
+
+.error {
+    color: red;
 }

@@ -10,11 +10,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BasicInfo from './components/BasicInfo';
 
 
-
-
-
-
-
 function App() {
   return (
 
