@@ -28,6 +28,12 @@ const GeneralInfo = () => {
   });
   const onContinue = () => {
     //console.log(generalInfo);
+    if(generalInfo.mobile===""){
+      return alert('mobile number is required')
+    }
+    if(generalInfo.file=== null){
+      return alert('add propert image')
+    }
     navigator("/locationInfo", {
       state: { generalInfo, propertyDetails, basicDetails },
     });
