@@ -46,11 +46,14 @@ const LocationInfo = () => {
   const onAdd = async () => {
    
     const formData = new FormData();
-
+ if(allDetails.email === "" ){
+  return alert ('email is required')
+ }
     formData.append("file", allDetails.file);
     formData.append("mobile", allDetails.mobile);
     formData.append("email", allDetails.email);
     store.dispatch(addUserDetails(formData));
+    alert('wait some seconds')
     // console.log(formData.get("email"));
     try {
       const response = await axios({
@@ -59,11 +62,13 @@ const LocationInfo = () => {
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       });
+      
       console.log(response);
+      alert("properties added successfully")
     } catch (error) {
       console.log(error);
     }
-    alert("properties added successfully")
+    
     navigator("/home");
   };
 
@@ -86,6 +91,7 @@ const LocationInfo = () => {
                   <input
                     className="selectBox"
                     placeholder="Email"
+                    
                     onChange={(e) => {
                       setLocationInfo({
                         ...LocationInfo,
