@@ -111,8 +111,6 @@ function Signin() {
           <p>Don't have an account?</p>
           <Link to={"/signup"}>Sign up</Link>
           {/* <a href="/signup">Sign up</a> */}
-
-           <Link to={"/signup"}>Sign up</Link>
           </div>
         </div>
         <div className="addition">
