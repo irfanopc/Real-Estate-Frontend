@@ -70,6 +70,7 @@ function Signup() {
                     onChange={(e)=>{setData({...data,email:e.target.value}); setError('')}} 
                     onBlur={handleValidationEmail}
                     />
+
                     <input 
                     className='login-input'  
                     type="password" 
@@ -79,7 +80,16 @@ function Signup() {
                     onChange={(e)=>{setData({...data,password:e.target.value}); setError('')}} 
                     onBlur={handleValidationPassword}
                     />
-                    <input className='login-input'  type="password" placeholder="Confirm Password" name="cpassword"  required onChange={(e)=>{setData({...data,cpassword:e.target.value})}} />
+
+                    <input 
+                    className='login-input'  
+                    type="password" 
+                    placeholder="Confirm Password" 
+                    name="cpassword"  
+                    required 
+                    onChange={(e)=>{setData({...data,cpassword:e.target.value})}} 
+                    />
+                    
                     <button className='login-btn' type="submit" onClick={onSubmit} >Sign up</button>
                 </form>
             </div>
