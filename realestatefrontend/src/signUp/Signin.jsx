@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Signup.css";
+import "./signin.css";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -62,7 +62,7 @@ function Signin() {
   
       <div className="login-main">
         <div className="login-box">
-          <div className="login-logo">LOGO</div>
+          <div className="login-logo">L O G O</div>
           <div className="login-para">
             Enter your credentials to access your account
           </div>
@@ -109,17 +109,14 @@ function Signin() {
         </div>
         <div className="addition">
           <p>Don't have an account?</p>
-     
-          {/* <a href="/signup">Sign up</a> */}
-
            <Link to={"/signup"}>Sign up</Link>
           </div>
         </div>
-        <div className="addition">
+        {/* <div className="addition">
           <pre>Don't have an account?</pre>
           <a href="/signup">Sign up</a>
         </div>
-        <div></div>
+        <div></div> */}
     
         <ToastContainer/>
     </>

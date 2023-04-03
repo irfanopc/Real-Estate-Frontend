@@ -55,23 +55,24 @@ function Signup() {
     return (
 
         <>
-        <div className="login-main" >
-            <div className="login-box">
-                <div className="login-logo">LOGO</div>
-                <div className="login-para">Create New Account</div>
+        <div className="signup-main" >
+            <div className="signup-box">
+                <div className="signup-logo">LOGO</div>
+                <div className="signup-para">Create New Account</div>
 
                 {error && <div className='error'>{error}</div>}
 
-                <form className='login-form'>
+                <form className='signup-form'>
                     <input 
-                    className='login-input'  
+                    className='signup-input'  
                     type="email" placeholder="Mail ID" 
                     name="email"  required  
                     onChange={(e)=>{setData({...data,email:e.target.value}); setError('')}} 
                     onBlur={handleValidationEmail}
                     />
+
                     <input 
-                    className='login-input'  
+                    className='signup-input'  
                     type="password" 
                     placeholder="Password" 
                     name="password"  
@@ -79,11 +80,20 @@ function Signup() {
                     onChange={(e)=>{setData({...data,password:e.target.value}); setError('')}} 
                     onBlur={handleValidationPassword}
                     />
-                    <input className='login-input'  type="password" placeholder="Confirm Password" name="cpassword"  required onChange={(e)=>{setData({...data,cpassword:e.target.value})}} />
+
+                    <input 
+                    className='signup-input'  
+                    type="password" 
+                    placeholder="Confirm Password" 
+                    name="cpassword"  
+                    required 
+                    onChange={(e)=>{setData({...data,cpassword:e.target.value})}} 
+                    />
+                    
                     <button className='login-btn' type="submit" onClick={onSubmit} >Sign up</button>
                 </form>
             </div>
-            <div className='addition'>
+            <div className='signup-addition'>
 
             
             <Link to={"/"}>Sign in</Link>

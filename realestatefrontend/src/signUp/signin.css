@@ -3,7 +3,7 @@
     padding: 0%;
 }
 
-.signup-main{
+.login-main{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -14,15 +14,15 @@
 }
 i {
     position: absolute;
-    top: 48%;
-    right: 35%;
+    top: 56%;
+    right: 20%;
 
   }
   i:hover {
     color: #00fcb6;
     cursor: pointer;
   }
-.signup-box{
+.login-box{
     display: flex;
     flex-direction: column;
     justify-content:center ;
@@ -34,7 +34,7 @@ i {
     background: #FFFFFF;
     border-radius: 10px;
 }
-.signup-logo{
+.login-logo{
     color: #4C57B6;
     font-size: 40px;
     font-family: Open Sans;
@@ -42,17 +42,15 @@ i {
     letter-spacing: 0.25 px;
     margin-top: 3%;
 }
-.signup-para{
+.login-para{
+    color: #000000;
     font-family: Open Sans;
     font-size: 15px;
     font-weight: 400;
     letter-spacing: 0.25 px;
     margin-top: 3%;
-    color: #000000;
-
-    opacity: 0.6;
 }
-.signup-form{
+.login-form{
     width: 100%;
     height: 45%;
     display: flex;
@@ -61,7 +59,7 @@ i {
     align-items: center;
     margin-top: 6%;
 }
-.signup-input{
+.login-input{
     width: 60%;
     height: 20%;
     border: 1px solid #E2E2E2; 
@@ -107,22 +105,35 @@ i {
 #anchor{
     text-decoration: none;
 }  
-.signup-addition{
-    position: absolute;
-    width: 59px;
-    height: 22px;
-    left: 740px;
-    top: 670px;
-    font-family: 'Open Sans';
-    font-style: normal;
+.addition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 600;
     font-size: 18px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.25px;
+    letter-spacing: 0.25 px;
+    font-size: Open Sans;
     color: #352D66;
-
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    width: 200px;
+    height: 22px;
+    left: 660px;
+    top: 670px;
+}
+.addition>p{
+    font-weight: 400;
+    font-size: 15px;
+    font-size: Open Sans;
+    color: #000000;
+    text-align: center;  
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    left: 700px;
+    top: 670px;
 }
 
+.error {
+    color: red;
+}
